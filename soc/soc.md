@@ -3,8 +3,8 @@
 Briey是个官方的soc，使用AXI接口。和Rocket Chip一样，支持Verilator+OpenOCD+GDB仿真。
 
 - `Briey.v` 完整的Briey
-- `BrieyNoSdram.v` 删除了sdram接口和gpioB接口
 - `BrieyNogpioB.v` 删除了gpioB接口 
+- `BrieyNoSdram.v` 删除了sdram接口和gpioB接口
 
 ### Murax
 Murax 是一个非常轻的 SoC（它适合 ICE40 FPGA），可以在没有任何外部组件的情况下工作：
