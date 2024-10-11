@@ -3,6 +3,7 @@
 // Git hash  : bd9e062abeec3a208f5112960ebef61bc5a80884
 
 `timescale 1ns/1ps
+`define SYNTHESIS
 
 module Briey (
   input  wire          io_asyncReset,
