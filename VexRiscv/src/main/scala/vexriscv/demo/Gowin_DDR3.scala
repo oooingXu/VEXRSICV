@@ -51,8 +51,9 @@ case class Gowin_DDR3(sysclk : ClockDomain, memclk : ClockDomain) extends BlackB
     val memory_clk = in Bool()
     val clk = in Bool()
     val pll_lock = in Bool()
+    val pll_stop = out Bool() /*wxz*/
     val rst_n = in Bool()
-    val app_burst_number = in UInt(6 bits)
+    //val app_burst_number = in UInt(6 bits) /*wxz*/
     val cmd_ready = out Bool()
     val cmd = in Bits(3 bits)
     val cmd_en = in Bool()
@@ -109,6 +110,7 @@ case class Gowin_DDR3(sysclk : ClockDomain, memclk : ClockDomain) extends BlackB
     iface.IO_ddr_dq := io.IO_ddr_dq
     iface.IO_ddr_dqs := io.IO_ddr_dqs
     iface.IO_ddr_dqs_n := io.IO_ddr_dqs_n
+    iface.pll_stop := io.pll_stop
   }
 
   noIoPrefix()

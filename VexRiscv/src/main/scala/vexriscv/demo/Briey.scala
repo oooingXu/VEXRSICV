@@ -187,10 +187,11 @@ class Briey(val config: BrieyConfig) extends Component{
     val sdram      = master(SdramInterface(sdramLayout))
     val ddr3       = master(DDR3_Interface()) /*wxz*/
     val pll_lock   = in Bool()                /*wxz*/
+    //val pll_stop   = out Bool()               /*wxz*/
 
     //Peripherals IO
     val gpioA         = master(TriStateArray(32 bits))
-    val gpioB         = master(TriStateArray(32 bits))
+    //val gpioB         = master(TriStateArray(32 bits))
     val uart          = master(Uart())
     val vga           = master(Vga(vgaRgbConfig))
     val timerExternal = in(PinsecTimerCtrlExternal())
@@ -276,10 +277,10 @@ class Briey(val config: BrieyConfig) extends Component{
       gpioWidth = 32,
       withReadSync = true
     )
-    val gpioBCtrl = Apb3Gpio(
+    /*val gpioBCtrl = Apb3Gpio(
       gpioWidth = 32,
       withReadSync = true
-    )
+    )*/
     val timerCtrl = PinsecTimerCtrl()
 
 
@@ -390,7 +391,7 @@ class Briey(val config: BrieyConfig) extends Component{
       master = apbBridge.io.apb,
       slaves = List(
         gpioACtrl.io.apb -> (0x00000, 4 kB),
-        gpioBCtrl.io.apb -> (0x01000, 4 kB),
+        //gpioBCtrl.io.apb -> (0x01000, 4 kB),
         uartCtrl.io.apb  -> (0x10000, 4 kB),
         timerCtrl.io.apb -> (0x20000, 4 kB),
         vgaCtrl.io.apb   -> (0x30000, 4 kB)
@@ -399,12 +400,13 @@ class Briey(val config: BrieyConfig) extends Component{
   }
 
   io.gpioA          <> axi.gpioACtrl.io.gpio
-  io.gpioB          <> axi.gpioBCtrl.io.gpio
+  //io.gpioB          <> axi.gpioBCtrl.io.gpio
   io.timerExternal  <> axi.timerCtrl.io.external
   io.uart           <> axi.uartCtrl.io.uart
   io.sdram          <> axi.sdramCtrl.io.sdram
   io.ddr3           <> axi.ddr3Ctrl.io.ddr_iface /*wxz*/
   io.pll_lock       <> axi.ddr3Ctrl.io.pll_lock  /*wxz*/
+  //io.pll_stop       <> axi.ddr3Ctrl.io.pll_stop  /*wxz*/
   io.vga            <> axi.vgaCtrl.io.vga
 }
 
