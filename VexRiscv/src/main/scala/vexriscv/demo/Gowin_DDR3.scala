@@ -110,7 +110,7 @@ case class Gowin_DDR3(sysclk : ClockDomain, memclk : ClockDomain) extends BlackB
     iface.IO_ddr_dq := io.IO_ddr_dq
     iface.IO_ddr_dqs := io.IO_ddr_dqs
     iface.IO_ddr_dqs_n := io.IO_ddr_dqs_n
-    iface.pll_stop := io.pll_stop
+    iface.pll_stop := io.pll_stop /*wxz*/
   }
 
   noIoPrefix()

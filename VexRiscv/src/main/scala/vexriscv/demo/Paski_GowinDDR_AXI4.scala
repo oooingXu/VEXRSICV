@@ -24,7 +24,6 @@ case class Paski_GowinDDR_AXI4_Compatible(sys_clk: ClockDomain, mem_clk: ClockDo
 
   val io = new Bundle() {
     val pll_lock = in Bool()
-    //val pll_stop = out Bool()/*wxz*/
     val axi = slave(Axi4(axiConfig))
     val ddr_iface = master(DDR3_Interface())
   }
@@ -33,7 +32,6 @@ case class Paski_GowinDDR_AXI4_Compatible(sys_clk: ClockDomain, mem_clk: ClockDo
 
   val sys_area = new ClockingArea(sys_clk) {
     inst.io.pll_lock := io.pll_lock
-    //inst.io.pll_stop := io.pll_stop /*wxz*/
     inst.io.axi << Axi4ToAxi4Shared(io.axi)
     io.ddr_iface := inst.io.ddr_iface
   }
@@ -60,7 +58,6 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
 
   val io = new Bundle() {
     val pll_lock = in Bool()
-    //val pll_stop = out Bool() /*wxz*/
     val axi = slave(Axi4Shared(axiController.axiConfig))
     val ddr_iface = master(DDR3_Interface())
   }
@@ -78,7 +75,6 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
     gowin_DDR3.io.ref_req := False
     gowin_DDR3.io.burst := True
     gowin_DDR3.io.pll_lock := io.pll_lock
-    //gowin_DDR3.io.pll_stop := io.pll_stop /*wxz*/
     //gowin_DDR3.io.app_burst_number := controller.io.app_burst_number /*wxz*/
     gowin_DDR3.io.cmd := controller.io.cmd
     gowin_DDR3.io.cmd_en := controller.io.cmd_en
