@@ -1,0 +1,17 @@
+-d /home/shaw/GW/IDE/bin/fpga_project/impl/gwsynthesis/fpga_project.vg
+-p GW5AST-138B-FCPBGA676A-1
+-pn GW5AST-LV138FPG676AC1/I0
+-cst /home/shaw/GW/IDE/bin/fpga_project/src/fpga_project.cst
+-cfg /home/shaw/GW/IDE/bin/fpga_project/impl/pnr/device.cfg
+-sdc /home/shaw/GW/IDE/bin/fpga_project/src/fpga_project.sdc
+-bit
+-tr
+-ph
+-o
+-timing
+-ireg_not_in_iob
+-oreg_not_in_iob
+-ioreg_not_in_iob
+-cst_error
+-correct_hold 1
+-route_maxfan 23
