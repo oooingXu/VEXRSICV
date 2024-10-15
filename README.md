@@ -4,6 +4,7 @@
 - [AM](abstract-machine/AM.md)
 - [VexRsicv](VexRsicv/VexRsicv.md)
 - [ddr3](ddr3/ddr3.md)
+- [fpga_project](fpga_project/fpga_project.md)
 
   主要参考[VexRiscv](https://github.com/SpinalHDL/VexRiscv),[NJU-ProjectN](https://github.com/NJU-ProjectN/abstract-machine)和[GowinDDR3_AXI4_SpinalHDL](https://github.com/PaserTech-Hardware/GowinDDR3_AXI4_SpinalHDL.git)
   
