@@ -2,5 +2,11 @@
 - [SOC](soc/soc.md)
 - [CPU](cpu/cpu.md)
 - [AM](abstract-machine/AM.md)
+- [VexRsicv](VexRsicv/VexRsicv.md)
+- [ddr3](ddr3/ddr3.md)
 
-主要参考[VexRiscv](https://github.com/SpinalHDL/VexRiscv)和[NJU-ProjectN](https://github.com/NJU-ProjectN/abstract-machine)
+  主要参考[VexRiscv](https://github.com/SpinalHDL/VexRiscv),[NJU-ProjectN](https://github.com/NJU-ProjectN/abstract-machine)和[GowinDDR3_AXI4_SpinalHDL](https://github.com/PaserTech-Hardware/GowinDDR3_AXI4_SpinalHDL.git)
+  
+  基于Gowin_Arora V的[VexRiscv](https://github.com/SpinalHDL/VexRiscv)软核移植实现.
+
+  存储器方面使用高云DDR3 Memory Interface软核,参考[GowinDDR3_AXI4_SpinalHDL](https://github.com/PaserTech-Hardware/GowinDDR3_AXI4_SpinalHDL.git)进行核心总线与DDR3控制器之间耦合.
