@@ -23,7 +23,7 @@ case class Paski_GowinDDR_AXI4_Compatible(sys_clk: ClockDomain, mem_clk: ClockDo
   val axiConfig = inst.axiController.axiConfig
 
   val io = new Bundle() {
-    val pll_lock = in Bool()
+    //val pll_lock = in Bool() /*wxz*/
     val axi = slave(Axi4(axiConfig))
     val ddr_iface = master(DDR3_Interface())
   }
@@ -31,7 +31,7 @@ case class Paski_GowinDDR_AXI4_Compatible(sys_clk: ClockDomain, mem_clk: ClockDo
   Axi4SpecRenamer(io.axi)
 
   val sys_area = new ClockingArea(sys_clk) {
-    inst.io.pll_lock := io.pll_lock
+    //inst.io.pll_lock := io.pll_lock /*wxz*/
     inst.io.axi << Axi4ToAxi4Shared(io.axi)
     io.ddr_iface := inst.io.ddr_iface
   }
@@ -57,11 +57,14 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
   )
 
   val io = new Bundle() {
-    val pll_lock = in Bool()
+    //val pll_lock = in Bool() /*wxz*/
+    //val pll_stop = out Bool() /*wxz*/
     val axi = slave(Axi4Shared(axiController.axiConfig))
     val ddr_iface = master(DDR3_Interface())
   }
 
+  
+  val pll_stop = Bool() /*wxz*/
   val sys_area = new ClockingArea(sys_clk) {
     axiController.io.ddr_cmd >> controller.io.ddr_cmd
     axiController.io.ddr_rsp << controller.io.ddr_rsp
@@ -71,10 +74,12 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
     io.axi.writeRsp << axiController.io.axi.writeRsp
     io.axi.readRsp  << axiController.io.axi.readRsp
 
+    gowin_DDR3.io.pll_stop <> pll_stop /*wxz*/
+    gowin_DDR3.io.pll_lock := False  /*wxz*/
     gowin_DDR3.io.sr_req := False
     gowin_DDR3.io.ref_req := False
     gowin_DDR3.io.burst := True
-    gowin_DDR3.io.pll_lock := io.pll_lock
+    //gowin_DDR3.io.pll_stop := out Bool() /*wxz*/
     //gowin_DDR3.io.app_burst_number := controller.io.app_burst_number /*wxz*/
     gowin_DDR3.io.cmd := controller.io.cmd
     gowin_DDR3.io.cmd_en := controller.io.cmd_en

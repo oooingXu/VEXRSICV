@@ -1,25 +1,25 @@
 [
   {
     "label": "VexRiscv.runClasspath.super.mill.scalalib.RunModule.runClasspath",
-    "millis": 3,
+    "millis": 15,
     "cached": true,
     "inputsHash": -848978659
   },
   {
     "label": "VexRiscv.scalaVersion",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -1570104273
   },
   {
     "label": "VexRiscv.platformSuffix",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -1158041570
   },
   {
     "label": "VexRiscv.scalaOrganization",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion"
@@ -66,7 +66,7 @@
   },
   {
     "label": "VexRiscv.transitiveIvyDeps",
-    "millis": 2,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -78,7 +78,7 @@
   },
   {
     "label": "VexRiscv.resolvedRunIvyDeps",
-    "millis": 1,
+    "millis": 3,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -91,25 +91,25 @@
   },
   {
     "label": "VexRiscv.transitiveLocalClasspath",
-    "millis": 0,
+    "millis": 3,
     "cached": true,
     "inputsHash": 1889025532
   },
   {
     "label": "VexRiscv.compileResources",
-    "millis": 1,
-    "inputsHash": 1597846244,
-    "previousInputsHash": 1537644371
+    "millis": 2,
+    "inputsHash": 1590940551,
+    "previousInputsHash": -403718043
   },
   {
     "label": "VexRiscv.unmanagedClasspath",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 1800564152
   },
   {
     "label": "VexRiscv.localCompileClasspath",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.compileResources",
@@ -119,32 +119,32 @@
   },
   {
     "label": "VexRiscv.localRunClasspath.super.mill.scalalib.RunModule.localRunClasspath",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -261679656
   },
   {
     "label": "VexRiscv.resources",
-    "millis": 1,
-    "inputsHash": -1370203898,
-    "previousInputsHash": 2107259750
+    "millis": 2,
+    "inputsHash": -795663221,
+    "previousInputsHash": 329054084
   },
   {
     "label": "mill.scalalib.ZincWorkerModule.classpath",
-    "millis": 1,
+    "millis": 5,
     "cached": true,
     "inputsHash": 1129846745
   },
   {
     "label": "mill.scalalib.ZincWorkerModule.zincLogDebug",
     "millis": 1,
-    "inputsHash": 1134417250,
-    "previousInputsHash": 320772298
+    "inputsHash": 629098296,
+    "previousInputsHash": 1946965327
   },
   {
     "label": "mill.scalalib.ZincWorkerModule.worker",
-    "millis": 0,
-    "cached": true,
+    "millis": 12,
+    "cached": false,
     "dependencies": [
       "mill.scalalib.ZincWorkerModule.classpath",
       "mill.scalalib.ZincWorkerModule.zincLogDebug"
@@ -153,52 +153,52 @@
   },
   {
     "label": "VexRiscv.upstreamCompileOutput",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 240977638
   },
   {
     "label": "VexRiscv.sources",
-    "millis": 5,
-    "inputsHash": -927990516,
-    "previousInputsHash": -1446182118
+    "millis": 15,
+    "inputsHash": 2147264560,
+    "previousInputsHash": -768799487
   },
   {
     "label": "VexRiscv.generatedSources",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -393331039
   },
   {
     "label": "VexRiscv.allSources",
-    "millis": 1,
+    "millis": 2,
     "cached": false,
     "dependencies": [
       "VexRiscv.sources",
       "VexRiscv.generatedSources"
     ],
-    "inputsHash": 1097517666,
-    "previousInputsHash": -1852806022
+    "inputsHash": -1520405907,
+    "previousInputsHash": -1833041349
   },
   {
     "label": "VexRiscv.allSourceFiles",
-    "millis": 6,
+    "millis": 18,
     "cached": false,
     "dependencies": [
       "VexRiscv.allSources"
     ],
-    "inputsHash": -1132218432,
-    "previousInputsHash": 404572339
+    "inputsHash": 612301719,
+    "previousInputsHash": 236312602
   },
   {
     "label": "VexRiscv.compileIvyDeps",
-    "millis": 0,
+    "millis": 2,
     "cached": true,
     "inputsHash": 1621890299
   },
   {
     "label": "VexRiscv.transitiveCompileIvyDeps",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -209,7 +209,7 @@
   },
   {
     "label": "VexRiscv.resolvedIvyDeps",
-    "millis": 1,
+    "millis": 3,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -222,13 +222,13 @@
   },
   {
     "label": "VexRiscv.transitiveCompileClasspath",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 310930573
   },
   {
     "label": "VexRiscv.compileClasspath",
-    "millis": 1,
+    "millis": 2,
     "cached": true,
     "dependencies": [
       "VexRiscv.resolvedIvyDeps",
@@ -239,13 +239,13 @@
   },
   {
     "label": "VexRiscv.javacOptions",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 89215381
   },
   {
     "label": "VexRiscv.mandatoryScalacOptions",
-    "millis": 3,
+    "millis": 1,
     "cached": true,
     "inputsHash": -1313490808
   },
@@ -269,13 +269,13 @@
   },
   {
     "label": "VexRiscv.scalacOptions",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 1729751459
   },
   {
     "label": "VexRiscv.allScalacOptions",
-    "millis": 0,
+    "millis": 3,
     "cached": true,
     "dependencies": [
       "VexRiscv.mandatoryScalacOptions",
@@ -298,7 +298,7 @@
   },
   {
     "label": "VexRiscv.scalacPluginClasspath",
-    "millis": 2,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -311,18 +311,18 @@
   {
     "label": "VexRiscv.zincReportCachedProblems",
     "millis": 1,
-    "inputsHash": -1299097208,
-    "previousInputsHash": -1912968368
+    "inputsHash": 2122652269,
+    "previousInputsHash": 455683172
   },
   {
     "label": "VexRiscv.zincIncrementalCompilation",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -1204177680
   },
   {
     "label": "VexRiscv.zincAuxiliaryClassFileExtensions.super.mill.scalalib.JavaModule.zincAuxiliaryClassFileExtensions",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -1949782319
   },
@@ -338,7 +338,7 @@
   },
   {
     "label": "VexRiscv.compile",
-    "millis": 604,
+    "millis": 3538,
     "cached": false,
     "dependencies": [
       "VexRiscv.scalaVersion",
@@ -355,20 +355,20 @@
       "VexRiscv.zincIncrementalCompilation",
       "VexRiscv.zincAuxiliaryClassFileExtensions"
     ],
-    "inputsHash": -970802601,
-    "previousInputsHash": -1802561277
+    "inputsHash": -209156951,
+    "previousInputsHash": 1253131101
   },
   {
     "label": "VexRiscv.localRunClasspath",
-    "millis": 6,
+    "millis": 2,
     "cached": false,
     "dependencies": [
       "VexRiscv.localRunClasspath.super.mill.scalalib.RunModule.localRunClasspath",
       "VexRiscv.resources",
       "VexRiscv.compile"
     ],
-    "inputsHash": 1098992538,
-    "previousInputsHash": -1753928743
+    "inputsHash": -176646518,
+    "previousInputsHash": -219038447
   },
   {
     "label": "VexRiscv.localClasspath",
@@ -378,12 +378,12 @@
       "VexRiscv.localCompileClasspath",
       "VexRiscv.localRunClasspath"
     ],
-    "inputsHash": -1991911953,
-    "previousInputsHash": -1739729936
+    "inputsHash": -2044101159,
+    "previousInputsHash": 148093453
   },
   {
     "label": "VexRiscv.runClasspath",
-    "millis": 1,
+    "millis": 2,
     "cached": false,
     "dependencies": [
       "VexRiscv.runClasspath.super.mill.scalalib.RunModule.runClasspath",
@@ -391,18 +391,18 @@
       "VexRiscv.transitiveLocalClasspath",
       "VexRiscv.localClasspath"
     ],
-    "inputsHash": 449894659,
-    "previousInputsHash": 1228678783
+    "inputsHash": 888209553,
+    "previousInputsHash": 1877487318
   },
   {
     "label": "VexRiscv.forkArgs.super.mill.scalalib.RunModule.forkArgs",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -161844907
   },
   {
     "label": "VexRiscv.forkArgs",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.forkArgs.super.mill.scalalib.RunModule.forkArgs"
@@ -411,28 +411,28 @@
   },
   {
     "label": "VexRiscv.forkEnv.super.mill.scalalib.RunModule.forkEnv",
-    "millis": 1,
-    "inputsHash": 499993123,
-    "previousInputsHash": -2016692667
+    "millis": 3,
+    "inputsHash": -2052159540,
+    "previousInputsHash": 487384548
   },
   {
     "label": "VexRiscv.forkEnv",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.forkEnv.super.mill.scalalib.RunModule.forkEnv"
     ],
-    "inputsHash": 1615865556
+    "inputsHash": -1005896528
   },
   {
     "label": "VexRiscv.forkWorkingDir.super.mill.scalalib.RunModule.forkWorkingDir",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": 2036652025
   },
   {
     "label": "VexRiscv.forkWorkingDir",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.forkWorkingDir.super.mill.scalalib.RunModule.forkWorkingDir"
@@ -441,13 +441,13 @@
   },
   {
     "label": "VexRiscv.runUseArgsFile.super.mill.scalalib.RunModule.runUseArgsFile",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "inputsHash": -521685712
   },
   {
     "label": "VexRiscv.runUseArgsFile",
-    "millis": 0,
+    "millis": 1,
     "cached": true,
     "dependencies": [
       "VexRiscv.runUseArgsFile.super.mill.scalalib.RunModule.runUseArgsFile"
@@ -456,7 +456,7 @@
   },
   {
     "label": "VexRiscv.runMain",
-    "millis": 1875,
+    "millis": 1905,
     "cached": false,
     "dependencies": [
       "VexRiscv.runClasspath",
@@ -465,6 +465,6 @@
       "VexRiscv.forkWorkingDir",
       "VexRiscv.runUseArgsFile"
     ],
-    "inputsHash": 1909241159
+    "inputsHash": -613990921
   }
 ]

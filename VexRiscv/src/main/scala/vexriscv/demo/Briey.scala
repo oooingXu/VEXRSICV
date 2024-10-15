@@ -186,7 +186,7 @@ class Briey(val config: BrieyConfig) extends Component{
     val jtag       = slave(Jtag())
     val sdram      = master(SdramInterface(sdramLayout))
     val ddr3       = master(DDR3_Interface()) /*wxz*/
-    val pll_lock   = in Bool()                /*wxz*/
+    //val pll_lock   = in Bool()                /*wxz*/
 
     //Peripherals IO
     val gpioA         = master(TriStateArray(32 bits))
@@ -244,7 +244,8 @@ class Briey(val config: BrieyConfig) extends Component{
 
   /*wxz*/
   val mem_clk = ClockDomain.external("mem_clk", config = ClockDomainConfig(resetKind = spinal.core.ASYNC, resetActiveLevel = LOW))
-
+  //val pll_stop = Bool()
+  //val pll_lock = Bool()
   val axi = new ClockingArea(axiClockDomain) {
     val ram = Axi4SharedOnChipRam(
       dataWidth = 32,
@@ -347,7 +348,7 @@ class Briey(val config: BrieyConfig) extends Component{
       crossbar.writeData.halfPipe() >> bridge.writeData
       crossbar.writeRsp             << bridge.writeRsp
       crossbar.readRsp              << bridge.readRsp
-    })
+     })
 
     axiCrossbar.addPipelining(sdramCtrl.io.axi)((crossbar,ctrl) => {
       crossbar.sharedCmd.halfPipe()  >>  ctrl.sharedCmd
@@ -404,7 +405,7 @@ class Briey(val config: BrieyConfig) extends Component{
   io.uart           <> axi.uartCtrl.io.uart
   io.sdram          <> axi.sdramCtrl.io.sdram
   io.ddr3           <> axi.ddr3Ctrl.io.ddr_iface /*wxz*/
-  io.pll_lock       <> axi.ddr3Ctrl.io.pll_lock  /*wxz*/
+  //io.pll_lock       <> axi.ddr3Ctrl.io.pll_lock  /*wxz*/
   io.vga            <> axi.vgaCtrl.io.vga
 }
 

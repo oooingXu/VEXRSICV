@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.10.1    git head : 2527c7c6b0fb0f95e5e1a5722a0be732b364ce43
 // Component : Briey
-// Git hash  : 0fc8360114f1f75ab8e3b26231894babf21eb55f
+// Git hash  : a973843c9f0d1aeb68461e883d0e8489dd3cba7e
 
 `timescale 1ns/1ps
 
@@ -35,11 +35,9 @@ module Briey (
   output wire          io_ddr3_O_ddr_odt,
   output wire          io_ddr3_O_ddr_reset_n,
   output wire [1:0]    io_ddr3_O_ddr_dqm,
-  output wire          io_ddr3_pll_stop,
   inout  wire [15:0]   io_ddr3_IO_ddr_dq,
   inout  wire [1:0]    io_ddr3_IO_ddr_dqs,
   inout  wire [1:0]    io_ddr3_IO_ddr_dqs_n,
-  input  wire          io_pll_lock,
   input  wire [31:0]   io_gpioA_read,
   output wire [31:0]   io_gpioA_write,
   output wire [31:0]   io_gpioA_writeEnable,
@@ -153,7 +151,6 @@ module Briey (
   wire                axi_ddr3Ctrl_io_ddr_iface_O_ddr_odt;
   wire                axi_ddr3Ctrl_io_ddr_iface_O_ddr_reset_n;
   wire       [1:0]    axi_ddr3Ctrl_io_ddr_iface_O_ddr_dqm;
-  wire                axi_ddr3Ctrl_io_ddr_iface_pll_stop;
   wire                axi_apbBridge_io_axi_arw_ready;
   wire                axi_apbBridge_io_axi_w_ready;
   wire                axi_apbBridge_io_axi_b_valid;
@@ -487,9 +484,9 @@ module Briey (
   wire       [2:0]    _zz_dbus_axi_arw_payload_len;
   reg                 resetCtrl_systemResetUnbuffered;
   reg        [5:0]    resetCtrl_systemResetCounter;
-  wire       [5:0]    _zz_when_Briey_l215;
-  wire                when_Briey_l215;
-  wire                when_Briey_l219;
+  wire       [5:0]    _zz_when_Briey_l214;
+  wire                when_Briey_l214;
+  wire                when_Briey_l218;
   reg                 resetCtrl_systemReset;
   reg                 resetCtrl_axiReset;
   wire                resetCtrl_vgaReset;
@@ -927,7 +924,6 @@ module Briey (
     .resetCtrl_axiReset         (resetCtrl_axiReset                                                                 ), //i
     .io_axiClk                  (io_axiClk                                                                          ), //i
     .mem_clk_clk                (mem_clk_clk                                                                        ), //i
-    .io_pll_lock                (io_pll_lock                                                                        ), //i
     .io_axi_arw_valid           (toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_arw_halfPipe_valid                  ), //i
     .io_axi_arw_ready           (axi_ddr3Ctrl_io_axi_arw_ready                                                      ), //o
     .io_axi_arw_payload_addr    (toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_arw_halfPipe_payload_addr[26:0]     ), //i
@@ -963,7 +959,6 @@ module Briey (
     .io_ddr_iface_O_ddr_odt     (axi_ddr3Ctrl_io_ddr_iface_O_ddr_odt                                                ), //o
     .io_ddr_iface_O_ddr_reset_n (axi_ddr3Ctrl_io_ddr_iface_O_ddr_reset_n                                            ), //o
     .io_ddr_iface_O_ddr_dqm     (axi_ddr3Ctrl_io_ddr_iface_O_ddr_dqm[1:0]                                           ), //o
-    .io_ddr_iface_pll_stop      (axi_ddr3Ctrl_io_ddr_iface_pll_stop                                                 ), //o
     .io_ddr_iface_IO_ddr_dq     ({io_ddr3_IO_ddr_dq}),
     .io_ddr_iface_IO_ddr_dqs    ({io_ddr3_IO_ddr_dqs}),
     .io_ddr_iface_IO_ddr_dqs_n  ({io_ddr3_IO_ddr_dqs_n}) 
@@ -1686,14 +1681,14 @@ module Briey (
 
   always @(*) begin
     resetCtrl_systemResetUnbuffered = 1'b0;
-    if(when_Briey_l215) begin
+    if(when_Briey_l214) begin
       resetCtrl_systemResetUnbuffered = 1'b1;
     end
   end
 
-  assign _zz_when_Briey_l215[5 : 0] = 6'h3f;
-  assign when_Briey_l215 = (resetCtrl_systemResetCounter != _zz_when_Briey_l215);
-  assign when_Briey_l219 = io_asyncReset_buffercc_io_dataOut;
+  assign _zz_when_Briey_l214[5 : 0] = 6'h3f;
+  assign when_Briey_l214 = (resetCtrl_systemResetCounter != _zz_when_Briey_l214);
+  assign when_Briey_l218 = io_asyncReset_buffercc_io_dataOut;
   assign resetCtrl_vgaReset = resetCtrl_axiReset_buffercc_io_dataOut;
   assign axi_core_cpu_iBus_rsp_payload_error = (! (axi4ReadOnlyDecoder_2_io_input_r_payload_resp == 2'b00));
   always @(*) begin
@@ -2101,7 +2096,6 @@ module Briey (
   assign io_ddr3_O_ddr_odt = axi_ddr3Ctrl_io_ddr_iface_O_ddr_odt;
   assign io_ddr3_O_ddr_reset_n = axi_ddr3Ctrl_io_ddr_iface_O_ddr_reset_n;
   assign io_ddr3_O_ddr_dqm = axi_ddr3Ctrl_io_ddr_iface_O_ddr_dqm;
-  assign io_ddr3_pll_stop = axi_ddr3Ctrl_io_ddr_iface_pll_stop;
   assign io_vga_vSync = axi_vgaCtrl_io_vga_vSync;
   assign io_vga_hSync = axi_vgaCtrl_io_vga_hSync;
   assign io_vga_colorEn = axi_vgaCtrl_io_vga_colorEn;
@@ -2110,10 +2104,10 @@ module Briey (
   assign io_vga_color_b = axi_vgaCtrl_io_vga_color_b;
   assign axi_core_cpu_softwareInterrupt = 1'b0;
   always @(posedge io_axiClk) begin
-    if(when_Briey_l215) begin
+    if(when_Briey_l214) begin
       resetCtrl_systemResetCounter <= (resetCtrl_systemResetCounter + 6'h01);
     end
-    if(when_Briey_l219) begin
+    if(when_Briey_l218) begin
       resetCtrl_systemResetCounter <= 6'h00;
     end
   end
@@ -12318,7 +12312,6 @@ module Paski_GowinDDR_AXI4 (
   input  wire          resetCtrl_axiReset,
   input  wire          io_axiClk,
   input  wire          mem_clk_clk,
-  input  wire          io_pll_lock,
   input  wire          io_axi_arw_valid,
   output wire          io_axi_arw_ready,
   input  wire [26:0]   io_axi_arw_payload_addr,
@@ -12354,7 +12347,6 @@ module Paski_GowinDDR_AXI4 (
   output wire          io_ddr_iface_O_ddr_odt,
   output wire          io_ddr_iface_O_ddr_reset_n,
   output wire [1:0]    io_ddr_iface_O_ddr_dqm,
-  output wire          io_ddr_iface_pll_stop,
   inout  wire [15:0]   io_ddr_iface_IO_ddr_dq,
   inout  wire [1:0]    io_ddr_iface_IO_ddr_dqs,
   inout  wire [1:0]    io_ddr_iface_IO_ddr_dqs_n
@@ -12362,6 +12354,7 @@ module Paski_GowinDDR_AXI4 (
   localparam Paski_GowinDDR_CMDTYPE_read = 1'd0;
   localparam Paski_GowinDDR_CMDTYPE_write = 1'd1;
 
+  wire                gowin_DDR3_pll_lock;
   wire                gowin_DDR3_rst_n;
   wire                gowin_DDR3_sr_req;
   wire                gowin_DDR3_ref_req;
@@ -12418,11 +12411,12 @@ module Paski_GowinDDR_AXI4 (
   wire                controller_io_ddr_rsp_valid;
   wire       [127:0]  controller_io_ddr_rsp_payload_rsp_data;
   wire       [0:0]    controller_io_ddr_rsp_payload_context;
+  wire                pll_stop;
 
   DDR3_Memory_Interface_Top gowin_DDR3 (
     .memory_clk          (mem_clk_clk                     ), //i
     .clk                 (io_axiClk                       ), //i
-    .pll_lock            (io_pll_lock                     ), //i
+    .pll_lock            (gowin_DDR3_pll_lock             ), //i
     .pll_stop            (gowin_DDR3_pll_stop             ), //o
     .rst_n               (gowin_DDR3_rst_n                ), //i
     .cmd_ready           (gowin_DDR3_cmd_ready            ), //o
@@ -12541,6 +12535,8 @@ module Paski_GowinDDR_AXI4 (
   assign io_axi_r_payload_id = axiController_io_axi_r_payload_id;
   assign io_axi_r_payload_resp = axiController_io_axi_r_payload_resp;
   assign io_axi_r_payload_last = axiController_io_axi_r_payload_last;
+  assign pll_stop = gowin_DDR3_pll_stop;
+  assign gowin_DDR3_pll_lock = 1'b0;
   assign gowin_DDR3_sr_req = 1'b0;
   assign gowin_DDR3_ref_req = 1'b0;
   assign gowin_DDR3_burst = 1'b1;
@@ -12556,7 +12552,6 @@ module Paski_GowinDDR_AXI4 (
   assign io_ddr_iface_O_ddr_odt = gowin_DDR3_O_ddr_odt;
   assign io_ddr_iface_O_ddr_reset_n = gowin_DDR3_O_ddr_reset_n;
   assign io_ddr_iface_O_ddr_dqm = gowin_DDR3_O_ddr_dqm;
-  assign io_ddr_iface_pll_stop = gowin_DDR3_pll_stop;
 
 endmodule
 
