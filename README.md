@@ -15,4 +15,4 @@
   FPGA项目主要文件: [verilog file](fpga_project/src)(\*.v)
   ,[netlist file](fpga_project/impl/gwsynthesis)(\*.vg)
   ,[physical constraints file](fpga_project/src)(\*.cst)
-  ,[Gowin_PLL软核](https://github.com/shaw-wu/VEXRSICV/tree/main/fpga_projiect/src/gowin_pll)
+  ,[Gowin_PLL软核](https://github.com/shaw-wu/VEXRSICV/tree/main/fpga_project/src/gowin_pll)
