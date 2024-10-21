@@ -1,7 +1,7 @@
 #include <am.h>
 #include <klib-macros.h>
 #include "../riscv.h"
-#include "npc.h"
+#include "briey.h"
 
 
 extern char _heap_start;
@@ -18,7 +18,7 @@ void putch(char ch) {
 }
 
 void halt(int code) {
-	npc_trap(code);
+	briey_trap(code);
 
   while (1);
 }
