@@ -1,0 +1,156 @@
+
+/home/romeo/ysyx-workbench/am-kernels/tests/cpu-tests/build/bit-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:	00000413          	li	s0,0
+a0000004:	00009117          	auipc	sp,0x9
+a0000008:	ffc10113          	addi	sp,sp,-4 # a0009000 <_end>
+a000000c:	1f8000ef          	jal	a0000204 <_trm_init>
+
+a0000010 <check>:
+a0000010:	00050463          	beqz	a0,a0000018 <check+0x8>
+a0000014:	00008067          	ret
+a0000018:	ff010113          	addi	sp,sp,-16
+a000001c:	00100513          	li	a0,1
+a0000020:	00112623          	sw	ra,12(sp)
+a0000024:	1d4000ef          	jal	a00001f8 <halt>
+
+a0000028 <getbit>:
+a0000028:	4035d793          	srai	a5,a1,0x3
+a000002c:	00f50533          	add	a0,a0,a5
+a0000030:	00054503          	lbu	a0,0(a0)
+a0000034:	0075f593          	andi	a1,a1,7
+a0000038:	00100793          	li	a5,1
+a000003c:	00b797b3          	sll	a5,a5,a1
+a0000040:	00f57533          	and	a0,a0,a5
+a0000044:	00a03533          	snez	a0,a0
+a0000048:	00008067          	ret
+
+a000004c <setbit>:
+a000004c:	4035d793          	srai	a5,a1,0x3
+a0000050:	ff010113          	addi	sp,sp,-16
+a0000054:	00f50533          	add	a0,a0,a5
+a0000058:	00a12623          	sw	a0,12(sp)
+a000005c:	00c12783          	lw	a5,12(sp)
+a0000060:	0075f593          	andi	a1,a1,7
+a0000064:	00100713          	li	a4,1
+a0000068:	00b71733          	sll	a4,a4,a1
+a000006c:	02061063          	bnez	a2,a000008c <setbit+0x40>
+a0000070:	0007c783          	lbu	a5,0(a5)
+a0000074:	fff74713          	not	a4,a4
+a0000078:	00e7f7b3          	and	a5,a5,a4
+a000007c:	00c12703          	lw	a4,12(sp)
+a0000080:	00f70023          	sb	a5,0(a4)
+a0000084:	01010113          	addi	sp,sp,16
+a0000088:	00008067          	ret
+a000008c:	0007c783          	lbu	a5,0(a5)
+a0000090:	00e7e7b3          	or	a5,a5,a4
+a0000094:	00c12703          	lw	a4,12(sp)
+a0000098:	0ff7f793          	zext.b	a5,a5
+a000009c:	00f70023          	sb	a5,0(a4)
+a00000a0:	01010113          	addi	sp,sp,16
+a00000a4:	00008067          	ret
+
+a00000a8 <main>:
+a00000a8:	fe010113          	addi	sp,sp,-32
+a00000ac:	0aa00793          	li	a5,170
+a00000b0:	00000593          	li	a1,0
+a00000b4:	00c10513          	addi	a0,sp,12
+a00000b8:	00112e23          	sw	ra,28(sp)
+a00000bc:	00f11623          	sh	a5,12(sp)
+a00000c0:	f69ff0ef          	jal	a0000028 <getbit>
+a00000c4:	00154513          	xori	a0,a0,1
+a00000c8:	0ff57513          	zext.b	a0,a0
+a00000cc:	f45ff0ef          	jal	a0000010 <check>
+a00000d0:	00100593          	li	a1,1
+a00000d4:	00c10513          	addi	a0,sp,12
+a00000d8:	f51ff0ef          	jal	a0000028 <getbit>
+a00000dc:	f35ff0ef          	jal	a0000010 <check>
+a00000e0:	00200593          	li	a1,2
+a00000e4:	00c10513          	addi	a0,sp,12
+a00000e8:	f41ff0ef          	jal	a0000028 <getbit>
+a00000ec:	00154513          	xori	a0,a0,1
+a00000f0:	0ff57513          	zext.b	a0,a0
+a00000f4:	f1dff0ef          	jal	a0000010 <check>
+a00000f8:	00300593          	li	a1,3
+a00000fc:	00c10513          	addi	a0,sp,12
+a0000100:	f29ff0ef          	jal	a0000028 <getbit>
+a0000104:	f0dff0ef          	jal	a0000010 <check>
+a0000108:	00400593          	li	a1,4
+a000010c:	00c10513          	addi	a0,sp,12
+a0000110:	f19ff0ef          	jal	a0000028 <getbit>
+a0000114:	00154513          	xori	a0,a0,1
+a0000118:	0ff57513          	zext.b	a0,a0
+a000011c:	ef5ff0ef          	jal	a0000010 <check>
+a0000120:	00500593          	li	a1,5
+a0000124:	00c10513          	addi	a0,sp,12
+a0000128:	f01ff0ef          	jal	a0000028 <getbit>
+a000012c:	ee5ff0ef          	jal	a0000010 <check>
+a0000130:	00600593          	li	a1,6
+a0000134:	00c10513          	addi	a0,sp,12
+a0000138:	ef1ff0ef          	jal	a0000028 <getbit>
+a000013c:	00154513          	xori	a0,a0,1
+a0000140:	0ff57513          	zext.b	a0,a0
+a0000144:	ecdff0ef          	jal	a0000010 <check>
+a0000148:	00700593          	li	a1,7
+a000014c:	00c10513          	addi	a0,sp,12
+a0000150:	ed9ff0ef          	jal	a0000028 <getbit>
+a0000154:	ebdff0ef          	jal	a0000010 <check>
+a0000158:	00c10513          	addi	a0,sp,12
+a000015c:	00100613          	li	a2,1
+a0000160:	00800593          	li	a1,8
+a0000164:	ee9ff0ef          	jal	a000004c <setbit>
+a0000168:	00c10513          	addi	a0,sp,12
+a000016c:	00000613          	li	a2,0
+a0000170:	00900593          	li	a1,9
+a0000174:	ed9ff0ef          	jal	a000004c <setbit>
+a0000178:	00c10513          	addi	a0,sp,12
+a000017c:	00100613          	li	a2,1
+a0000180:	00a00593          	li	a1,10
+a0000184:	ec9ff0ef          	jal	a000004c <setbit>
+a0000188:	00c10513          	addi	a0,sp,12
+a000018c:	00000613          	li	a2,0
+a0000190:	00b00593          	li	a1,11
+a0000194:	eb9ff0ef          	jal	a000004c <setbit>
+a0000198:	00c10513          	addi	a0,sp,12
+a000019c:	00100613          	li	a2,1
+a00001a0:	00c00593          	li	a1,12
+a00001a4:	ea9ff0ef          	jal	a000004c <setbit>
+a00001a8:	00c10513          	addi	a0,sp,12
+a00001ac:	00000613          	li	a2,0
+a00001b0:	00d00593          	li	a1,13
+a00001b4:	e99ff0ef          	jal	a000004c <setbit>
+a00001b8:	00c10513          	addi	a0,sp,12
+a00001bc:	00100613          	li	a2,1
+a00001c0:	00e00593          	li	a1,14
+a00001c4:	e89ff0ef          	jal	a000004c <setbit>
+a00001c8:	00c10513          	addi	a0,sp,12
+a00001cc:	00000613          	li	a2,0
+a00001d0:	00f00593          	li	a1,15
+a00001d4:	e79ff0ef          	jal	a000004c <setbit>
+a00001d8:	00d14503          	lbu	a0,13(sp)
+a00001dc:	fab50513          	addi	a0,a0,-85
+a00001e0:	00153513          	seqz	a0,a0
+a00001e4:	e2dff0ef          	jal	a0000010 <check>
+a00001e8:	01c12083          	lw	ra,28(sp)
+a00001ec:	00000513          	li	a0,0
+a00001f0:	02010113          	addi	sp,sp,32
+a00001f4:	00008067          	ret
+
+a00001f8 <halt>:
+a00001f8:	00050513          	mv	a0,a0
+a00001fc:	00100073          	ebreak
+a0000200:	0000006f          	j	a0000200 <halt+0x8>
+
+a0000204 <_trm_init>:
+a0000204:	ff010113          	addi	sp,sp,-16
+a0000208:	00000517          	auipc	a0,0x0
+a000020c:	01c50513          	addi	a0,a0,28 # a0000224 <_etext>
+a0000210:	00112623          	sw	ra,12(sp)
+a0000214:	e95ff0ef          	jal	a00000a8 <main>
+a0000218:	00050513          	mv	a0,a0
+a000021c:	00100073          	ebreak
+a0000220:	0000006f          	j	a0000220 <_trm_init+0x1c>

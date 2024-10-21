@@ -1,0 +1,25 @@
+
+/home/romeo/ysyx-workbench/am-kernels/tests/cpu-tests/build/dummy-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:	00000413          	li	s0,0
+a0000004:	00009117          	auipc	sp,0x9
+a0000008:	ffc10113          	addi	sp,sp,-4 # a0009000 <_end>
+a000000c:	00c000ef          	jal	a0000018 <_trm_init>
+
+a0000010 <main>:
+a0000010:	00000513          	li	a0,0
+a0000014:	00008067          	ret
+
+a0000018 <_trm_init>:
+a0000018:	ff010113          	addi	sp,sp,-16
+a000001c:	00000517          	auipc	a0,0x0
+a0000020:	01c50513          	addi	a0,a0,28 # a0000038 <_etext>
+a0000024:	00112623          	sw	ra,12(sp)
+a0000028:	fe9ff0ef          	jal	a0000010 <main>
+a000002c:	00050513          	mv	a0,a0
+a0000030:	00100073          	ebreak
+a0000034:	0000006f          	j	a0000034 <_trm_init+0x1c>
