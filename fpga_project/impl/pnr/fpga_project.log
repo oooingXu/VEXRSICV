@@ -1,0 +1,29 @@
+Reading netlist file: "/home/shaw/GW/IDE/bin/fpga_project/impl/gwsynthesis/fpga_project.vg"
+Parsing netlist file "/home/shaw/GW/IDE/bin/fpga_project/impl/gwsynthesis/fpga_project.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/shaw/GW/IDE/bin/fpga_project/src/fpga_project.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'io_jtag_tck_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'io_axiClk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Generate file "/home/shaw/GW/IDE/bin/fpga_project/impl/pnr/fpga_project.pin.html" completed
+Generate file "/home/shaw/GW/IDE/bin/fpga_project/impl/pnr/fpga_project.rpt.html" completed
+Generate file "/home/shaw/GW/IDE/bin/fpga_project/impl/pnr/fpga_project.rpt.txt" completed
+Generate file "/home/shaw/GW/IDE/bin/fpga_project/impl/pnr/fpga_project.vo" completed
+Generate file "/home/shaw/GW/IDE/bin/fpga_project/impl/pnr/fpga_project.tr.html" completed
+Wed Oct 16 14:30:03 2024
+
