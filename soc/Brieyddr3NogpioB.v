@@ -44,7 +44,7 @@ module Briey (
   input  wire          io_timerExternal_tick,
   input  wire          io_coreInterrupt,
   input  wire          mem_clk_clk,
-	output reg [5:0]		 led
+	output wire [5:0]		 led
 );
 
   wire       [3:0]    axi_gpioACtrl_io_apb_PADDR;
@@ -708,7 +708,7 @@ module Briey (
 	wire			 [31:0]		a0;
 	reg									halt;
 
-	always@(poseedge io_axiClk) begin
+	always@(posedge io_axiClk) begin
 		halt <= (a0 == 32'b0);
 	end
 
@@ -718,7 +718,7 @@ module Briey (
 		.clk	(io_axiClk),
 		.rst	(halt			),
 		.led	(led			),
-		.key	(4'b1111	)
+		.key	(4'b0000	)
 	);
   BufferCC io_asyncReset_buffercc (
     .io_dataIn  (io_asyncReset                    ), //i
@@ -2058,33 +2058,21 @@ module Briey (
 
 endmodule
 
-module led (
+module key_led(
     input           clk,
-    input           rst_n,
-    output [5:0]    led
+    input           rst,
+    output [5:0]    led,
+
+    input  [3:0]    key
 );
 
-// generate 1ms time count.
-reg [32:0] time_cnt;
-reg [6:0] led_reg;
-always @(posedge clk or negedge rst_n) begin
-    if(!rst_n) begin
-        time_cnt <= 'd0;
-        led_reg <= 'd0;
-    end
-    else if(time_cnt < 50000000 / 8) begin
-        time_cnt <= time_cnt + 'b1;
-    end else begin
-        time_cnt <= 'd0;
-        if(led_reg[6]) begin
-            led_reg[6:0] <= 'd1;
-        end else begin
-            led_reg <= (led_reg << 1) | 'b1 ;
-        end
-    end
-end
+wire rst_n = (&key[3:0])&(!rst);
 
-assign led[5:0] = ~led_reg[5:0];
+led led_inst(
+    .clk(clk),
+    .led(led),
+    .rst_n(rst_n)
+);
 
 endmodule
 
@@ -11698,7 +11686,7 @@ module Paski_GowinDDR_AXI4 (
     .clk                 (io_axiClk                          ), //i
     .pll_lock            (io_pll_lock                        ), //i
     .rst_n               (gowin_DDR3_rst_n                   ), //i
-    .app_burst_number    (controller_io_app_burst_number[5:0]), //i
+    //.app_burst_number    (controller_io_app_burst_number[5:0]), //i
     .cmd_ready           (gowin_DDR3_cmd_ready               ), //o
     .cmd                 (controller_io_cmd[2:0]             ), //i
     .cmd_en              (controller_io_cmd_en               ), //i
