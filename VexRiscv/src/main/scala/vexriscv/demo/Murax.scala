@@ -1,5 +1,6 @@
 package vexriscv.demo
 
+import spinal.lib.com.jtag.JtagTapInstructionCtrl
 import spinal.core._
 import spinal.lib._
 import spinal.lib.bus.amba3.apb._
@@ -162,7 +163,7 @@ case class Murax(config : MuraxConfig) extends Component{
     val mainClk = in Bool()
 
     //Main components IO
-    val jtag = slave(Jtag())
+    //val jtag = slave(Jtag())
 
     //Peripherals IO
     val gpioA = master(TriStateArray(gpioWidth bits))
@@ -251,7 +252,10 @@ case class Murax(config : MuraxConfig) extends Component{
       }
       case plugin : DebugPlugin         => plugin.debugClockDomain{
         resetCtrl.systemReset setWhen(RegNext(plugin.io.resetOut))
-        io.jtag <> plugin.io.bus.fromJtag()
+        //io.jtag <> plugin.io.bus.fromJtag()
+        	val jtagCtrl = JtagTapInstructionCtrl()
+	        val tap = jtagCtrl.fromXilinxBscane2(userId = 2)
+	        jtagCtrl <> plugin.io.bus.fromJtagInstructionCtrl(ClockDomain(tap.TCK),0)
       }
       case _ =>
     }
@@ -438,15 +442,15 @@ object Murax_iCE40_hx8k_breakout_board_xip{
     mainClkBuffer.USER_SIGNAL_TO_GLOBAL_BUFFER <> io.mainClk
     mainClkBuffer.GLOBAL_BUFFER_OUTPUT <> murax.io.mainClk
 
-    val jtagClkBuffer = SB_GB()
-    jtagClkBuffer.USER_SIGNAL_TO_GLOBAL_BUFFER <> io.jtag_tck
-    jtagClkBuffer.GLOBAL_BUFFER_OUTPUT <> murax.io.jtag.tck
+    //val jtagClkBuffer = SB_GB()
+    //jtagClkBuffer.USER_SIGNAL_TO_GLOBAL_BUFFER <> io.jtag_tck
+    //jtagClkBuffer.GLOBAL_BUFFER_OUTPUT <> murax.io.jtag.tck
 
     io.led <> murax.io.gpioA.write(7 downto 0)
 
-    murax.io.jtag.tdi <> io.jtag_tdi
-    murax.io.jtag.tdo <> io.jtag_tdo
-    murax.io.jtag.tms <> io.jtag_tms
+    //murax.io.jtag.tdi <> io.jtag_tdi
+    //murax.io.jtag.tdo <> io.jtag_tdo
+    //murax.io.jtag.tms <> io.jtag_tms
     murax.io.gpioA.read <> 0
     murax.io.uart.txd <> io.uart_txd
     murax.io.uart.rxd <> io.uart_rxd

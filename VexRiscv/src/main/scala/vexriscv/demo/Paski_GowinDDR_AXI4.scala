@@ -63,8 +63,7 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
     val ddr_iface = master(DDR3_Interface())
   }
 
-  
-  val pll_stop = Bool() /*wxz*/
+  //val pll_stop = Bool() /*wxz*/
   val sys_area = new ClockingArea(sys_clk) {
     axiController.io.ddr_cmd >> controller.io.ddr_cmd
     axiController.io.ddr_rsp << controller.io.ddr_rsp
@@ -74,8 +73,8 @@ case class Paski_GowinDDR_AXI4(sys_clk: ClockDomain, mem_clk: ClockDomain) exten
     io.axi.writeRsp << axiController.io.axi.writeRsp
     io.axi.readRsp  << axiController.io.axi.readRsp
 
-    gowin_DDR3.io.pll_stop <> pll_stop /*wxz*/
-    gowin_DDR3.io.pll_lock := False  /*wxz*/
+    //gowin_DDR3.io.pll_stop <> io.ddr_iface.pll_stop /*wxz*/
+    //gowin_DDR3.io.pll_lock := io.ddr_iface.pll_lock  /*wxz*/
     gowin_DDR3.io.sr_req := False
     gowin_DDR3.io.ref_req := False
     gowin_DDR3.io.burst := True
