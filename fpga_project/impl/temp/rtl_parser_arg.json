@@ -10,6 +10,14 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/toplevel.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/gowin_pll/gowin_pll.v",
    "Type" : "verilog"
   }
@@ -19,7 +27,7 @@
  ],
  "LoopLimit" : 2000,
  "ResultFile" : "/home/shaw/GW/IDE/bin/fpga_project/impl/temp/rtl_parser.result",
- "Top" : "Briey",
+ "Top" : "toplevel",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
 }

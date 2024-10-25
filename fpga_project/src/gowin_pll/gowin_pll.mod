@@ -2,21 +2,21 @@
 -device GW5AST-138B
 -device_version B
 -package FCPBGA676A
--part_number GW5AST-LV138FPG676AES
+-part_number GW5AST-LV138FPG676AC1/I0
 
 
 -mod_name Gowin_PLL
 -file_name gowin_pll
--path E:/memory/DDR3/Gowin_DDR3_Memory_Interface_RefDesign/DDR3_MC_PHY_1vs4_5a138k/project/src/gowin_pll/
+-path /home/shaw/GW/IDE/bin/fpga_project/src/gowin_pll/
 -type PLL_ADV
 -file_type vlg
 -ssc false
 -clock_en true
--rst true
+-rst false
 -rst_pwd false
 -rst_i false
 -rst_o false
--fclkin 50
+-fclkin 100
 -dyn_idiv_sel false
 -idiv_sel 1
 -clkfb_sel 0
@@ -38,17 +38,7 @@
 -dyn_dt0_sel false
 -clkout0_dt_dir 1
 -clkout0_dt_step 0
--en_clkout1 true
--clkout1_bypass false
--dyn_odiv1_sel false
--odiv1_sel 16
--dyn_dt1_sel false
--clkout1_dt_dir 1
--clkout1_dt_step 0
--dyn_pe1_sel false
--clkout1_pe_coarse 0
--clkout1_pe_fine 0
--de1_en false
+-en_clkout1 false
 -en_clkout2 true
 -clkout2_bypass false
 -dyn_odiv2_sel false
@@ -66,5 +56,5 @@
 -en_clkout6 false
 -en_clkfbout false
 -dyn_mdiv_sel false
--mdiv_sel 16
+-mdiv_sel 8
 -mdiv_frac_sel 0

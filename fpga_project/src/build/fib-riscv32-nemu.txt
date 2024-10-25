@@ -1,0 +1,67 @@
+
+/home/romeo/ysyx-workbench/am-kernels/tests/cpu-tests/build/fib-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:	00000413          	li	s0,0
+a0000004:	00009117          	auipc	sp,0x9
+a0000008:	ffc10113          	addi	sp,sp,-4 # a0009000 <_end>
+a000000c:	0a4000ef          	jal	a00000b0 <_trm_init>
+
+a0000010 <check>:
+a0000010:	00050463          	beqz	a0,a0000018 <check+0x8>
+a0000014:	00008067          	ret
+a0000018:	ff010113          	addi	sp,sp,-16
+a000001c:	00100513          	li	a0,1
+a0000020:	00112623          	sw	ra,12(sp)
+a0000024:	080000ef          	jal	a00000a4 <halt>
+
+a0000028 <main>:
+a0000028:	ff010113          	addi	sp,sp,-16
+a000002c:	00812423          	sw	s0,8(sp)
+a0000030:	00912223          	sw	s1,4(sp)
+a0000034:	01212023          	sw	s2,0(sp)
+a0000038:	00112623          	sw	ra,12(sp)
+a000003c:	00000417          	auipc	s0,0x0
+a0000040:	13840413          	addi	s0,s0,312 # a0000174 <fib>
+a0000044:	00000497          	auipc	s1,0x0
+a0000048:	09848493          	addi	s1,s1,152 # a00000dc <ans+0x8>
+a000004c:	00000917          	auipc	s2,0x0
+a0000050:	1c090913          	addi	s2,s2,448 # a000020c <fib+0x98>
+a0000054:	00042703          	lw	a4,0(s0)
+a0000058:	00442783          	lw	a5,4(s0)
+a000005c:	0004a503          	lw	a0,0(s1)
+a0000060:	00440413          	addi	s0,s0,4
+a0000064:	00e787b3          	add	a5,a5,a4
+a0000068:	40f50533          	sub	a0,a0,a5
+a000006c:	00f42223          	sw	a5,4(s0)
+a0000070:	00153513          	seqz	a0,a0
+a0000074:	f9dff0ef          	jal	a0000010 <check>
+a0000078:	00448493          	addi	s1,s1,4
+a000007c:	fd241ce3          	bne	s0,s2,a0000054 <main+0x2c>
+a0000080:	00100513          	li	a0,1
+a0000084:	f8dff0ef          	jal	a0000010 <check>
+a0000088:	00c12083          	lw	ra,12(sp)
+a000008c:	00812403          	lw	s0,8(sp)
+a0000090:	00412483          	lw	s1,4(sp)
+a0000094:	00012903          	lw	s2,0(sp)
+a0000098:	00000513          	li	a0,0
+a000009c:	01010113          	addi	sp,sp,16
+a00000a0:	00008067          	ret
+
+a00000a4 <halt>:
+a00000a4:	00050513          	mv	a0,a0
+a00000a8:	00100073          	ebreak
+a00000ac:	0000006f          	j	a00000ac <halt+0x8>
+
+a00000b0 <_trm_init>:
+a00000b0:	ff010113          	addi	sp,sp,-16
+a00000b4:	00000517          	auipc	a0,0x0
+a00000b8:	01c50513          	addi	a0,a0,28 # a00000d0 <_etext>
+a00000bc:	00112623          	sw	ra,12(sp)
+a00000c0:	f69ff0ef          	jal	a0000028 <main>
+a00000c4:	00050513          	mv	a0,a0
+a00000c8:	00100073          	ebreak
+a00000cc:	0000006f          	j	a00000cc <_trm_init+0x1c>

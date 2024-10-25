@@ -1,0 +1,90 @@
+
+/home/romeo/ysyx-workbench/am-kernels/tests/cpu-tests/build/div-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:	00000413          	li	s0,0
+a0000004:	00009117          	auipc	sp,0x9
+a0000008:	ffc10113          	addi	sp,sp,-4 # a0009000 <_end>
+a000000c:	100000ef          	jal	a000010c <_trm_init>
+
+a0000010 <check>:
+a0000010:	00050463          	beqz	a0,a0000018 <check+0x8>
+a0000014:	00008067          	ret
+a0000018:	ff010113          	addi	sp,sp,-16
+a000001c:	00100513          	li	a0,1
+a0000020:	00112623          	sw	ra,12(sp)
+a0000024:	0dc000ef          	jal	a0000100 <halt>
+
+a0000028 <main>:
+a0000028:	ff010113          	addi	sp,sp,-16
+a000002c:	00912223          	sw	s1,4(sp)
+a0000030:	00000497          	auipc	s1,0x0
+a0000034:	10048493          	addi	s1,s1,256 # a0000130 <a>
+a0000038:	00112623          	sw	ra,12(sp)
+a000003c:	00812423          	sw	s0,8(sp)
+a0000040:	01212023          	sw	s2,0(sp)
+a0000044:	00048713          	mv	a4,s1
+a0000048:	00000793          	li	a5,0
+a000004c:	00a00693          	li	a3,10
+a0000050:	00f72023          	sw	a5,0(a4)
+a0000054:	00178793          	addi	a5,a5,1
+a0000058:	00470713          	addi	a4,a4,4
+a000005c:	fed79ae3          	bne	a5,a3,a0000050 <main+0x28>
+a0000060:	00000597          	auipc	a1,0x0
+a0000064:	0f858593          	addi	a1,a1,248 # a0000158 <a+0x28>
+a0000068:	00000617          	auipc	a2,0x0
+a000006c:	0c860613          	addi	a2,a2,200 # a0000130 <a>
+a0000070:	00b00693          	li	a3,11
+a0000074:	00062703          	lw	a4,0(a2)
+a0000078:	00100793          	li	a5,1
+a000007c:	02f70733          	mul	a4,a4,a5
+a0000080:	00178793          	addi	a5,a5,1
+a0000084:	fed79ce3          	bne	a5,a3,a000007c <main+0x54>
+a0000088:	00e62023          	sw	a4,0(a2)
+a000008c:	00460613          	addi	a2,a2,4
+a0000090:	feb612e3          	bne	a2,a1,a0000074 <main+0x4c>
+a0000094:	00000617          	auipc	a2,0x0
+a0000098:	09c60613          	addi	a2,a2,156 # a0000130 <a>
+a000009c:	00b00693          	li	a3,11
+a00000a0:	00062703          	lw	a4,0(a2)
+a00000a4:	00100793          	li	a5,1
+a00000a8:	02f74733          	div	a4,a4,a5
+a00000ac:	00178793          	addi	a5,a5,1
+a00000b0:	fed79ce3          	bne	a5,a3,a00000a8 <main+0x80>
+a00000b4:	00e62023          	sw	a4,0(a2)
+a00000b8:	00460613          	addi	a2,a2,4
+a00000bc:	feb612e3          	bne	a2,a1,a00000a0 <main+0x78>
+a00000c0:	00000413          	li	s0,0
+a00000c4:	00a00913          	li	s2,10
+a00000c8:	0004a503          	lw	a0,0(s1)
+a00000cc:	00448493          	addi	s1,s1,4
+a00000d0:	40850533          	sub	a0,a0,s0
+a00000d4:	00153513          	seqz	a0,a0
+a00000d8:	00140413          	addi	s0,s0,1
+a00000dc:	f35ff0ef          	jal	a0000010 <check>
+a00000e0:	ff2414e3          	bne	s0,s2,a00000c8 <main+0xa0>
+a00000e4:	00c12083          	lw	ra,12(sp)
+a00000e8:	00812403          	lw	s0,8(sp)
+a00000ec:	00412483          	lw	s1,4(sp)
+a00000f0:	00012903          	lw	s2,0(sp)
+a00000f4:	00000513          	li	a0,0
+a00000f8:	01010113          	addi	sp,sp,16
+a00000fc:	00008067          	ret
+
+a0000100 <halt>:
+a0000100:	00050513          	mv	a0,a0
+a0000104:	00100073          	ebreak
+a0000108:	0000006f          	j	a0000108 <halt+0x8>
+
+a000010c <_trm_init>:
+a000010c:	ff010113          	addi	sp,sp,-16
+a0000110:	00000517          	auipc	a0,0x0
+a0000114:	01c50513          	addi	a0,a0,28 # a000012c <_etext>
+a0000118:	00112623          	sw	ra,12(sp)
+a000011c:	f0dff0ef          	jal	a0000028 <main>
+a0000120:	00050513          	mv	a0,a0
+a0000124:	00100073          	ebreak
+a0000128:	0000006f          	j	a0000128 <_trm_init+0x1c>

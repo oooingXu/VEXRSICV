@@ -1,0 +1,89 @@
+
+/home/romeo/ysyx-workbench/am-kernels/tests/cpu-tests/build/shuixianhua-riscv32-nemu.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+a0000000 <_start>:
+a0000000:	00000413          	li	s0,0
+a0000004:	00009117          	auipc	sp,0x9
+a0000008:	ffc10113          	addi	sp,sp,-4 # a0009000 <_end>
+a000000c:	0fc000ef          	jal	a0000108 <_trm_init>
+
+a0000010 <check>:
+a0000010:	00050463          	beqz	a0,a0000018 <check+0x8>
+a0000014:	00008067          	ret
+a0000018:	ff010113          	addi	sp,sp,-16
+a000001c:	00100513          	li	a0,1
+a0000020:	00112623          	sw	ra,12(sp)
+a0000024:	0d8000ef          	jal	a00000fc <halt>
+
+a0000028 <main>:
+a0000028:	fe010113          	addi	sp,sp,-32
+a000002c:	00812c23          	sw	s0,24(sp)
+a0000030:	00912a23          	sw	s1,20(sp)
+a0000034:	01212823          	sw	s2,16(sp)
+a0000038:	01312623          	sw	s3,12(sp)
+a000003c:	01412423          	sw	s4,8(sp)
+a0000040:	01512223          	sw	s5,4(sp)
+a0000044:	00112e23          	sw	ra,28(sp)
+a0000048:	00000a93          	li	s5,0
+a000004c:	06400413          	li	s0,100
+a0000050:	06400a13          	li	s4,100
+a0000054:	00a00913          	li	s2,10
+a0000058:	00000497          	auipc	s1,0x0
+a000005c:	0d448493          	addi	s1,s1,212 # a000012c <ans>
+a0000060:	1f400993          	li	s3,500
+a0000064:	00c0006f          	j	a0000070 <main+0x48>
+a0000068:	00140413          	addi	s0,s0,1
+a000006c:	05340e63          	beq	s0,s3,a00000c8 <main+0xa0>
+a0000070:	03244633          	div	a2,s0,s2
+a0000074:	034446b3          	div	a3,s0,s4
+a0000078:	03266633          	rem	a2,a2,s2
+a000007c:	03246733          	rem	a4,s0,s2
+a0000080:	02c607b3          	mul	a5,a2,a2
+a0000084:	02d68533          	mul	a0,a3,a3
+a0000088:	02e705b3          	mul	a1,a4,a4
+a000008c:	02c787b3          	mul	a5,a5,a2
+a0000090:	02d506b3          	mul	a3,a0,a3
+a0000094:	02e58733          	mul	a4,a1,a4
+a0000098:	00d787b3          	add	a5,a5,a3
+a000009c:	00e787b3          	add	a5,a5,a4
+a00000a0:	fc8794e3          	bne	a5,s0,a0000068 <main+0x40>
+a00000a4:	002a9793          	slli	a5,s5,0x2
+a00000a8:	00f487b3          	add	a5,s1,a5
+a00000ac:	0007a503          	lw	a0,0(a5)
+a00000b0:	001a8a93          	addi	s5,s5,1
+a00000b4:	40850533          	sub	a0,a0,s0
+a00000b8:	00153513          	seqz	a0,a0
+a00000bc:	00140413          	addi	s0,s0,1
+a00000c0:	f51ff0ef          	jal	a0000010 <check>
+a00000c4:	fb3416e3          	bne	s0,s3,a0000070 <main+0x48>
+a00000c8:	ffca8513          	addi	a0,s5,-4
+a00000cc:	00153513          	seqz	a0,a0
+a00000d0:	f41ff0ef          	jal	a0000010 <check>
+a00000d4:	01c12083          	lw	ra,28(sp)
+a00000d8:	01812403          	lw	s0,24(sp)
+a00000dc:	01412483          	lw	s1,20(sp)
+a00000e0:	01012903          	lw	s2,16(sp)
+a00000e4:	00c12983          	lw	s3,12(sp)
+a00000e8:	00812a03          	lw	s4,8(sp)
+a00000ec:	00412a83          	lw	s5,4(sp)
+a00000f0:	00000513          	li	a0,0
+a00000f4:	02010113          	addi	sp,sp,32
+a00000f8:	00008067          	ret
+
+a00000fc <halt>:
+a00000fc:	00050513          	mv	a0,a0
+a0000100:	00100073          	ebreak
+a0000104:	0000006f          	j	a0000104 <halt+0x8>
+
+a0000108 <_trm_init>:
+a0000108:	ff010113          	addi	sp,sp,-16
+a000010c:	00000517          	auipc	a0,0x0
+a0000110:	01c50513          	addi	a0,a0,28 # a0000128 <_etext>
+a0000114:	00112623          	sw	ra,12(sp)
+a0000118:	f11ff0ef          	jal	a0000028 <main>
+a000011c:	00050513          	mv	a0,a0
+a0000120:	00100073          	ebreak
+a0000124:	0000006f          	j	a0000124 <_trm_init+0x1c>

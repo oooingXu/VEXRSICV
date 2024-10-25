@@ -5,7 +5,7 @@
 //Part Number: GW5AST-LV138FPG676AC1/I0
 //Device: GW5AST-138
 //Device Version: B
-//Created Time: Wed 10 16 14:27:59 2024
+//Created Time: Tue 10 22 23:32:25 2024
 
 IO_LOC "io_ddr3_O_ddr_ba[2]" K3;
 IO_PORT "io_ddr3_O_ddr_ba[2]" PULL_MODE=NONE DRIVE=8 BANK_VCCIO=3.3;
@@ -103,4 +103,5 @@ IO_LOC "io_jtag_tms" H11;
 IO_PORT "io_jtag_tms" PULL_MODE=NONE BANK_VCCIO=3.3;
 IO_LOC "io_axiClk" P16;
 IO_PORT "io_axiClk" PULL_MODE=NONE BANK_VCCIO=3.3;
+IO_LOC "io_asyncReset" K16;
 IO_PORT "io_asyncReset" PULL_MODE=NONE BANK_VCCIO=3.3;

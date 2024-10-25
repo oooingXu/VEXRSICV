@@ -39,7 +39,7 @@ object BrieyConfig{
   def default = {
     val config = BrieyConfig(
       axiFrequency = 50 MHz,
-      onChipRamSize  = 4 kB,
+      onChipRamSize  = 512 kB,
       //sdramLayout = IS42x320D.layout,
       //sdramTimings = IS42x320D.timingGrade7,
       uartCtrlConfig = UartCtrlMemoryMappedConfig(
@@ -135,24 +135,24 @@ object BrieyConfig{
         new CsrPlugin(
           config = CsrPluginConfig(
             catchIllegalAccess = false,
-            mvendorid      = null,
-            marchid        = null,
-            mimpid         = null,
-            mhartid        = null,
+            mvendorid      = 11,
+            marchid        = 22,
+            mimpid         = 33,
+            mhartid        = 0,
             misaExtensionsInit = 66,
-            misaAccess     = CsrAccess.NONE,
-            mtvecAccess    = CsrAccess.NONE,
+            misaAccess     = CsrAccess.READ_WRITE,
+            mtvecAccess    = CsrAccess.READ_WRITE,
             mtvecInit      = 0x80000020l,
             mepcAccess     = CsrAccess.READ_WRITE,
-            mscratchGen    = false,
-            mcauseAccess   = CsrAccess.READ_ONLY,
-            mbadaddrAccess = CsrAccess.READ_ONLY,
-            mcycleAccess   = CsrAccess.NONE,
-            minstretAccess = CsrAccess.NONE,
-            ecallGen       = false,
-            wfiGenAsWait         = false,
-            ucycleAccess   = CsrAccess.NONE,
-            uinstretAccess = CsrAccess.NONE
+            mscratchGen    = true,
+            mcauseAccess   = CsrAccess.READ_WRITE,
+            mbadaddrAccess = CsrAccess.READ_WRITE,
+            mcycleAccess   = CsrAccess.READ_WRITE,
+            minstretAccess = CsrAccess.READ_WRITE,
+            ecallGen       = true,
+            wfiGenAsWait   = true,
+            ucycleAccess   = CsrAccess.READ_ONLY,
+            uinstretAccess = CsrAccess.READ_ONLY
           )
         ),
         new YamlPlugin("cpu0.yaml")
@@ -337,10 +337,10 @@ class Briey(val config: BrieyConfig) extends Component{
     val axiCrossbar = Axi4CrossbarFactory()
 
     axiCrossbar.addSlaves(
-      ram.io.axi       -> (0x00000000L,   onChipRamSize),
+      ram.io.axi       -> (0x80000000L,   onChipRamSize),
       /*sdramCtrl.io.axi -> (0x20000000L,   sdramLayout.capacity),*/
-      apbBridge.io.axi -> (0x80000000L,   256 MB),
-      ddr3Ctrl.io.axi  -> (0xa0000000L,   512 MB) /*wxz*/
+      apbBridge.io.axi -> (0xa0000000L,   256 MB),
+      ddr3Ctrl.io.axi  -> (0x20000000L,   512 MB) /*wxz*/
     )
 
     axiCrossbar.addConnections(
