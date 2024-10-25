@@ -56556,9 +56556,9 @@ Disassembly of section .text:
 80034a38:	0107d793          	srli	a5,a5,0x10
 80034a3c:	02f686b3          	mul	a3,a3,a5
 80034a40:	00068e63          	beqz	a3,80034a5c <__am_gpu_init+0x34>
-80034a44:	a1000737          	lui	a4,0xa1000
+80034a44:	a0030737          	lui	a4,0xa0030
 80034a48:	00000793          	li	a5,0
-80034a4c:	00f72023          	sw	a5,0(a4) # a1000000 <_end+0x20f86000>
+80034a4c:	00f72023          	sw	a5,0(a4) # a0030000 <_end+0x1ffb6000>
 80034a50:	00178793          	addi	a5,a5,1
 80034a54:	00470713          	addi	a4,a4,4
 80034a58:	fed79ae3          	bne	a5,a3,80034a4c <__am_gpu_init+0x24>
@@ -56598,7 +56598,7 @@ Disassembly of section .text:
 80034ad0:	01cf0833          	add	a6,t5,t3
 80034ad4:	00279e93          	slli	t4,a5,0x2
 80034ad8:	00000313          	li	t1,0
-80034adc:	a1000537          	lui	a0,0xa1000
+80034adc:	a0030537          	lui	a0,0xa0030
 80034ae0:	01e585b3          	add	a1,a1,t5
 80034ae4:	00259593          	slli	a1,a1,0x2
 80034ae8:	41f585b3          	sub	a1,a1,t6
@@ -56627,7 +56627,7 @@ Disassembly of section .text:
 80034b44:	fe0704e3          	beqz	a4,80034b2c <__am_gpu_fbdraw+0x94>
 80034b48:	a00006b7          	lui	a3,0xa0000
 80034b4c:	1006a783          	lw	a5,256(a3) # a0000100 <_end+0x1ff86100>
-80034b50:	00852f83          	lw	t6,8(a0) # a1000008 <_end+0x20f86008>
+80034b50:	00852f83          	lw	t6,8(a0) # a0030008 <_end+0x1ffb6008>
 80034b54:	00e882b3          	add	t0,a7,a4
 80034b58:	0107d793          	srli	a5,a5,0x10
 80034b5c:	f6e046e3          	bgtz	a4,80034ac8 <__am_gpu_fbdraw+0x30>
