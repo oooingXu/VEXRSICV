@@ -1,0 +1,15 @@
+{
+    "value": [
+        "qref:v1:bfd981e7:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalamacros/paradise_2.11.12/2.1.1/paradise_2.11.12-2.1.1.jar",
+        "qref:v1:93d732bf:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-plugin_2.11/1.10.1/spinalhdl-idsl-plugin_2.11-1.10.1.jar",
+        "qref:v1:06c66689:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.12/scala-compiler-2.11.12.jar",
+        "qref:v1:f48d6135:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+        "qref:v1:33eab8fc:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.12/scala-reflect-2.11.12.jar",
+        "qref:v1:56c104bb:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/spinalhdl/spinalhdl-idsl-payload_2.11/1.10.1/spinalhdl-idsl-payload_2.11-1.10.1.jar",
+        "qref:v1:00094ece:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalactic/scalactic_2.11/3.2.10/scalactic_2.11-3.2.10.jar",
+        "qref:v1:218f3b5b:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.5/scala-xml_2.11-1.0.5.jar",
+        "qref:v1:6fc6de3b:/home/shaw/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar"
+    ],
+    "valueHash": 1868513932,
+    "inputsHash": -715019752
+}
