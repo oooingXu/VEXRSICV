@@ -7,7 +7,7 @@
     <FileList>
         <File path="src/Briey.v" type="file.verilog" enable="1"/>
         <File path="src/ddr3_memory_interface/ddr3_memory_interface.v" type="file.verilog" enable="1"/>
-        <File path="src/gowin_pll/gowin_pll.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pll_DDR3/gowin_pll_DDR3.v" type="file.verilog" enable="1"/>
         <File path="src/spi_flash_interface/spi_flash_interface.v" type="file.verilog" enable="1"/>
         <File path="src/toplevel.v" type="file.verilog" enable="1"/>
         <File path="src/fpga_project.cst" type="file.cst" enable="1"/>

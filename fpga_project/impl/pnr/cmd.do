@@ -1,9 +1,9 @@
--d /home/shaw/GW/IDE/bin/fpga_project/impl/gwsynthesis/fpga_project.vg
+-d D:\File_Tmp\VEXRSICV\fpga_project\impl\gwsynthesis\fpga_project.vg
 -p GW5AST-138B-FCPBGA676A-1
 -pn GW5AST-LV138FPG676AC1/I0
--cst /home/shaw/GW/IDE/bin/fpga_project/src/fpga_project.cst
--cfg /home/shaw/GW/IDE/bin/fpga_project/impl/pnr/device.cfg
--sdc /home/shaw/GW/IDE/bin/fpga_project/src/fpga_project.sdc
+-cst D:\File_Tmp\VEXRSICV\fpga_project\src\fpga_project.cst
+-cfg D:\File_Tmp\VEXRSICV\fpga_project\impl\pnr\device.cfg
+-sdc D:\File_Tmp\VEXRSICV\fpga_project\src\fpga_project.sdc
 -bit
 -tr
 -ph

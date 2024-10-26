@@ -10,7 +10,7 @@
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
 
-    Gowin_PLL your_instance_name(
+    Gowin_PLL_DDR3 your_instance_name(
         .lock(lock_o), //output lock
         .clkout0(clkout0_o), //output clkout0
         .clkout2(clkout2_o), //output clkout2

@@ -1,6 +1,7 @@
 // Generator : SpinalHDL v1.10.2a    git head : a348a60b7e8b6a455c72e1536ec3d74a2ea16935
 // Component : Briey
 
+`define SYNTHESIS
 `timescale 1ns/1ps
 
 module Briey (

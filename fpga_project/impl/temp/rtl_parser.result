@@ -1,738 +1,702 @@
 [
  {
-  "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-  "InstLine" : 7,
-  "InstName" : "Briey",
-  "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-  "ModuleLine" : 7,
-  "ModuleName" : "Briey",
+  "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/toplevel.v",
+  "InstLine" : 3,
+  "InstName" : "toplevel",
+  "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/toplevel.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "toplevel",
   "SubInsts" : [
    {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 831,
-    "InstName" : "io_asyncReset_buffercc",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 13321,
-    "ModuleName" : "BufferCC"
+    "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/toplevel.v",
+    "InstLine" : 54,
+    "InstName" : "pll",
+    "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/gowin_pll_DDR3/gowin_pll_DDR3.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_PLL_DDR3"
    },
    {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 836,
-    "InstName" : "resetCtrl_axiReset_buffercc",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 13321,
-    "ModuleName" : "BufferCC"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 841,
-    "InstName" : "axi_ram",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 12959,
-    "ModuleName" : "Axi4SharedOnChipRam"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 868,
-    "InstName" : "axi_sdramCtrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 12482,
-    "ModuleName" : "Axi4SharedSdramCtrl",
+    "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/toplevel.v",
+    "InstLine" : 61,
+    "InstName" : "core",
+    "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "Briey",
     "SubInsts" : [
      {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 12650,
-      "InstName" : "ctrl",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 17220,
-      "ModuleName" : "SdramCtrl",
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 713,
+      "InstName" : "io_asyncReset_buffercc",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 12180,
+      "ModuleName" : "BufferCC"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 718,
+      "InstName" : "resetCtrl_axiReset_buffercc",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 12180,
+      "ModuleName" : "BufferCC"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 723,
+      "InstName" : "axi_ram",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 11818,
+      "ModuleName" : "Axi4SharedOnChipRam"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 750,
+      "InstName" : "axi_ddr3Ctrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 11578,
+      "ModuleName" : "Paski_GowinDDR_AXI4",
       "SubInsts" : [
        {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 17494,
-        "InstName" : "chip_backupIn_fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 19878,
-        "ModuleName" : "StreamFifoLowLatency_4",
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 11680,
+        "InstName" : "gowin_DDR3",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
+        "ModuleLine" : 21222,
+        "ModuleName" : "DDR3_Memory_Interface_Top",
         "SubInsts" : [
          {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19904,
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
+          "InstLine" : 21307,
+          "InstName" : "gw3_top",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "~GW_DDR3_PHY_MC.DDR3_Memory_Interface_Top"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 11722,
+        "InstName" : "axiController",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15406,
+        "ModuleName" : "Paski_GowinDDR_AXI4WithCache"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 11761,
+        "InstName" : "controller",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15191,
+        "ModuleName" : "Paski_GowinDDR14_Controller",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 15275,
+          "InstName" : "cmd_fifo",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 17140,
+          "ModuleName" : "StreamFifoCC_1",
+          "SubInsts" : [
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17253,
+            "InstName" : "popToPushGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17644,
+            "ModuleName" : "BufferCC_17"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17259,
+            "InstName" : "bufferCC_20",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17620,
+            "ModuleName" : "BufferCC_18"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17265,
+            "InstName" : "pushToPopGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17596,
+            "ModuleName" : "BufferCC_19"
+           }
+          ]
+         },
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 15298,
+          "InstName" : "rsp_fifo",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16940,
+          "ModuleName" : "StreamFifoCC_2",
+          "SubInsts" : [
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17024,
+            "InstName" : "popToPushGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17572,
+            "ModuleName" : "BufferCC_14"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17030,
+            "InstName" : "bufferCC_20",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17548,
+            "ModuleName" : "BufferCC_15"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 17036,
+            "InstName" : "pushToPopGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17524,
+            "ModuleName" : "BufferCC_16"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 795,
+      "InstName" : "axi_apbBridge",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 11352,
+      "ModuleName" : "Axi4SharedToApb3Bridge"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 830,
+      "InstName" : "axi_gpioACtrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 11260,
+      "ModuleName" : "Apb3Gpio",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 11287,
+        "InstName" : "io_gpio_read_buffercc",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15172,
+        "ModuleName" : "BufferCC_5"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 846,
+      "InstName" : "axi_flashCtrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 11205,
+      "ModuleName" : "Paski_GowinFlash",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 11232,
+        "InstName" : "gowin_Flash",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
+        "ModuleLine" : 4088,
+        "ModuleName" : "SPI_Flash_Interface_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
+          "InstLine" : 4153,
+          "InstName" : "spiflash_inst",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "~spiflash.SPI_Flash_Interface_Top"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 865,
+      "InstName" : "axi_timerCtrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 10736,
+      "ModuleName" : "PinsecTimerCtrl",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10810,
+        "InstName" : "io_external_buffercc",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15146,
+        "ModuleName" : "BufferCC_4"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10818,
+        "InstName" : "prescaler_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15123,
+        "ModuleName" : "Prescaler"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10825,
+        "InstName" : "timerA",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15077,
+        "ModuleName" : "Timer"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10834,
+        "InstName" : "timerB",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15031,
+        "ModuleName" : "Timer_1"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10843,
+        "InstName" : "timerC",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15031,
+        "ModuleName" : "Timer_1"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10852,
+        "InstName" : "timerD",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15031,
+        "ModuleName" : "Timer_1"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10861,
+        "InstName" : "interruptCtrl_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 15004,
+        "ModuleName" : "InterruptCtrl"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 880,
+      "InstName" : "axi_uartCtrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 10317,
+      "ModuleName" : "Apb3UartCtrl",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10418,
+        "InstName" : "uartCtrl_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14875,
+        "ModuleName" : "UartCtrl",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14919,
+          "InstName" : "tx",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16700,
+          "ModuleName" : "UartCtrlTx"
+         },
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14933,
+          "InstName" : "rx",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16406,
+          "ModuleName" : "UartCtrlRx",
+          "SubInsts" : [
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 16485,
+            "InstName" : "io_rxd_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17500,
+            "ModuleName" : "BufferCC_13"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10437,
+        "InstName" : "bridge_write_streamUnbuffered_queueWithOccupancy",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14721,
+        "ModuleName" : "StreamFifo"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10450,
+        "InstName" : "axi_uartCtrl_uartCtrl_1_io_read_queueWithOccupancy",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14721,
+        "ModuleName" : "StreamFifo"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 894,
+      "InstName" : "axi_vgaCtrl",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 9967,
+      "ModuleName" : "Axi4VgaCtrl",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10064,
+        "InstName" : "dma",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14237,
+        "ModuleName" : "VideoDma",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14361,
+          "InstName" : "rspArea_fifo",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16174,
+          "ModuleName" : "StreamFifoCC",
+          "SubInsts" : [
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 16276,
+            "InstName" : "popToPushGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17476,
+            "ModuleName" : "BufferCC_10"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 16282,
+            "InstName" : "bufferCC_20",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17452,
+            "ModuleName" : "BufferCC_11"
+           },
+           {
+            "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "InstLine" : 16288,
+            "InstName" : "pushToPopGray_buffercc",
+            "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+            "ModuleLine" : 17428,
+            "ModuleName" : "BufferCC_12"
+           }
+          ]
+         },
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14376,
+          "InstName" : "rspArea_frameClockArea_popCmdGray_buffercc",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16155,
+          "ModuleName" : "BufferCC_9"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10086,
+        "InstName" : "run_buffercc",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14218,
+        "ModuleName" : "BufferCC_3"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10092,
+        "InstName" : "vga_ctrl",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14092,
+        "ModuleName" : "VgaCtrl"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 10120,
+        "InstName" : "pulseCCByToggle_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 14039,
+        "ModuleName" : "PulseCCByToggle",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14055,
+          "InstName" : "bufferCC_20",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16131,
+          "ModuleName" : "BufferCC_7"
+         },
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 14061,
+          "InstName" : "inArea_target_buffercc",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16107,
+          "ModuleName" : "BufferCC_8"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 924,
+      "InstName" : "axi_core_cpu",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 4822,
+      "ModuleName" : "VexRiscv",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 6333,
+        "InstName" : "IBusCachedPlugin_cache",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 13740,
+        "ModuleName" : "InstructionCache"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 6377,
+        "InstName" : "dataCache_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12886,
+        "ModuleName" : "DataCache"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 959,
+      "InstName" : "io_coreInterrupt_buffercc",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 4803,
+      "ModuleName" : "BufferCC_2"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 965,
+      "InstName" : "jtagBridge_1",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 4075,
+      "ModuleName" : "JtagBridge",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 4203,
+        "InstName" : "flowCCUnsafeByToggle_1",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12814,
+        "ModuleName" : "FlowCCUnsafeByToggle",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 12839,
+          "InstName" : "inputArea_target_buffercc",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 16081,
+          "ModuleName" : "BufferCC_6"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 981,
+      "InstName" : "systemDebugger_1",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 3988,
+      "ModuleName" : "SystemDebugger"
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1001,
+      "InstName" : "axi4ReadOnlyDecoder_2",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 3805,
+      "ModuleName" : "Axi4ReadOnlyDecoder",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 3874,
+        "InstName" : "errorSlave",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12755,
+        "ModuleName" : "Axi4ReadOnlyErrorSlave_1"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1041,
+      "InstName" : "dbus_axi_decoder",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 3437,
+      "ModuleName" : "Axi4SharedDecoder",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 3581,
+        "InstName" : "errorSlave",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12666,
+        "ModuleName" : "Axi4SharedErrorSlave"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1129,
+      "InstName" : "axi_vgaCtrl_io_axi_decoder",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 3266,
+      "ModuleName" : "Axi4ReadOnlyDecoder_1",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 3331,
+        "InstName" : "errorSlave",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12609,
+        "ModuleName" : "Axi4ReadOnlyErrorSlave"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1166,
+      "InstName" : "axi_ram_io_axi_arbiter",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 2889,
+      "ModuleName" : "Axi4SharedArbiter",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 3061,
+        "InstName" : "cmdArbiter",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12460,
+        "ModuleName" : "StreamArbiter_2"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 3099,
+        "InstName" : "cmdRouteFork_thrown_translated_fifo",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12425,
+        "ModuleName" : "StreamFifoLowLatency_2",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 12442,
           "InstName" : "fifo",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20171,
-          "ModuleName" : "StreamFifo_6"
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 15987,
+          "ModuleName" : "StreamFifo_4"
          }
         ]
        }
       ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 906,
-    "InstName" : "axi_ddr3Ctrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 12243,
-    "ModuleName" : "Paski_GowinDDR_AXI4",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 12344,
-      "InstName" : "gowin_DDR3",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
-      "ModuleLine" : 21222,
-      "ModuleName" : "DDR3_Memory_Interface_Top",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
-        "InstLine" : 21307,
-        "InstName" : "gw3_top",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
-        "ModuleLine" : 1,
-        "ModuleName" : "~GW_DDR3_PHY_MC.DDR3_Memory_Interface_Top"
-       }
-      ]
      },
      {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 12386,
-      "InstName" : "axiController",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16643,
-      "ModuleName" : "Paski_GowinDDR_AXI4WithCache"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 12425,
-      "InstName" : "controller",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16428,
-      "ModuleName" : "Paski_GowinDDR14_Controller",
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1242,
+      "InstName" : "axi_ddr3Ctrl_io_axi_arbiter",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 2512,
+      "ModuleName" : "Axi4SharedArbiter_1",
       "SubInsts" : [
        {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 16512,
-        "InstName" : "cmd_fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 19590,
-        "ModuleName" : "StreamFifoCC_1",
-        "SubInsts" : [
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19703,
-          "InstName" : "popToPushGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20147,
-          "ModuleName" : "BufferCC_17"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19709,
-          "InstName" : "bufferCC_20",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20123,
-          "ModuleName" : "BufferCC_18"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19715,
-          "InstName" : "pushToPopGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20099,
-          "ModuleName" : "BufferCC_19"
-         }
-        ]
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 2684,
+        "InstName" : "cmdArbiter",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12276,
+        "ModuleName" : "StreamArbiter_1"
        },
        {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 16535,
-        "InstName" : "rsp_fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 19390,
-        "ModuleName" : "StreamFifoCC_2",
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 2722,
+        "InstName" : "cmdRouteFork_thrown_translated_fifo",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12425,
+        "ModuleName" : "StreamFifoLowLatency_2",
         "SubInsts" : [
          {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19474,
-          "InstName" : "popToPushGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20075,
-          "ModuleName" : "BufferCC_14"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19480,
-          "InstName" : "bufferCC_20",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20051,
-          "ModuleName" : "BufferCC_15"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 19486,
-          "InstName" : "pushToPopGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20027,
-          "ModuleName" : "BufferCC_16"
-         }
-        ]
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 949,
-    "InstName" : "axi_apbBridge",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 12017,
-    "ModuleName" : "Axi4SharedToApb3Bridge"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 984,
-    "InstName" : "axi_gpioACtrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 11925,
-    "ModuleName" : "Apb3Gpio",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11952,
-      "InstName" : "io_gpio_read_buffercc",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16409,
-      "ModuleName" : "BufferCC_5"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1000,
-    "InstName" : "axi_timerCtrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 11456,
-    "ModuleName" : "PinsecTimerCtrl",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11530,
-      "InstName" : "io_external_buffercc",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16383,
-      "ModuleName" : "BufferCC_4"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11538,
-      "InstName" : "prescaler_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16360,
-      "ModuleName" : "Prescaler"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11545,
-      "InstName" : "timerA",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16314,
-      "ModuleName" : "Timer"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11554,
-      "InstName" : "timerB",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16268,
-      "ModuleName" : "Timer_1"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11563,
-      "InstName" : "timerC",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16268,
-      "ModuleName" : "Timer_1"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11572,
-      "InstName" : "timerD",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16268,
-      "ModuleName" : "Timer_1"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11581,
-      "InstName" : "interruptCtrl_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16241,
-      "ModuleName" : "InterruptCtrl"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1015,
-    "InstName" : "axi_uartCtrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 11037,
-    "ModuleName" : "Apb3UartCtrl",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11138,
-      "InstName" : "uartCtrl_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 16112,
-      "ModuleName" : "UartCtrl",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 16156,
-        "InstName" : "tx",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 19150,
-        "ModuleName" : "UartCtrlTx"
-       },
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 16170,
-        "InstName" : "rx",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18856,
-        "ModuleName" : "UartCtrlRx",
-        "SubInsts" : [
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 18935,
-          "InstName" : "io_rxd_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 20003,
-          "ModuleName" : "BufferCC_13"
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 12442,
+          "InstName" : "fifo",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 15987,
+          "ModuleName" : "StreamFifo_4"
          }
         ]
        }
       ]
      },
      {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11157,
-      "InstName" : "bridge_write_streamUnbuffered_queueWithOccupancy",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15958,
-      "ModuleName" : "StreamFifo"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 11170,
-      "InstName" : "axi_uartCtrl_uartCtrl_1_io_read_queueWithOccupancy",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15958,
-      "ModuleName" : "StreamFifo"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1029,
-    "InstName" : "axi_vgaCtrl",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 10687,
-    "ModuleName" : "Axi4VgaCtrl",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 10784,
-      "InstName" : "dma",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15474,
-      "ModuleName" : "VideoDma",
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1318,
+      "InstName" : "axi_apbBridge_io_axi_arbiter",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 2250,
+      "ModuleName" : "Axi4SharedArbiter_2",
       "SubInsts" : [
        {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 15598,
-        "InstName" : "rspArea_fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18624,
-        "ModuleName" : "StreamFifoCC",
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 2366,
+        "InstName" : "cmdArbiter",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12200,
+        "ModuleName" : "StreamArbiter"
+       },
+       {
+        "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "InstLine" : 2387,
+        "InstName" : "cmdRouteFork_thrown_translated_fifo",
+        "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+        "ModuleLine" : 12425,
+        "ModuleName" : "StreamFifoLowLatency_2",
         "SubInsts" : [
          {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 18726,
-          "InstName" : "popToPushGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 19979,
-          "ModuleName" : "BufferCC_10"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 18732,
-          "InstName" : "bufferCC_20",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 19955,
-          "ModuleName" : "BufferCC_11"
-         },
-         {
-          "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "InstLine" : 18738,
-          "InstName" : "pushToPopGray_buffercc",
-          "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-          "ModuleLine" : 19931,
-          "ModuleName" : "BufferCC_12"
+          "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "InstLine" : 12442,
+          "InstName" : "fifo",
+          "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+          "ModuleLine" : 15987,
+          "ModuleName" : "StreamFifo_4"
          }
         ]
-       },
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 15613,
-        "InstName" : "rspArea_frameClockArea_popCmdGray_buffercc",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18605,
-        "ModuleName" : "BufferCC_9"
        }
       ]
      },
      {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 10806,
-      "InstName" : "run_buffercc",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15455,
-      "ModuleName" : "BufferCC_3"
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1368,
+      "InstName" : "io_apb_decoder",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 2198,
+      "ModuleName" : "Apb3Decoder"
      },
      {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 10812,
-      "InstName" : "vga_ctrl",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15329,
-      "ModuleName" : "VgaCtrl"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 10840,
-      "InstName" : "pulseCCByToggle_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 15276,
-      "ModuleName" : "PulseCCByToggle",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 15292,
-        "InstName" : "bufferCC_20",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18581,
-        "ModuleName" : "BufferCC_7"
-       },
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 15298,
-        "InstName" : "inArea_target_buffercc",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18557,
-        "ModuleName" : "BufferCC_8"
-       }
-      ]
+      "InstFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "InstLine" : 1386,
+      "InstName" : "apb3Router_1",
+      "ModuleFile" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
+      "ModuleLine" : 2067,
+      "ModuleName" : "Apb3Router"
      }
     ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1059,
-    "InstName" : "axi_core_cpu",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 5542,
-    "ModuleName" : "VexRiscv",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 7053,
-      "InstName" : "IBusCachedPlugin_cache",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 14977,
-      "ModuleName" : "InstructionCache"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 7097,
-      "InstName" : "dataCache_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 14123,
-      "ModuleName" : "DataCache"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1094,
-    "InstName" : "io_coreInterrupt_buffercc",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 5523,
-    "ModuleName" : "BufferCC_2"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1100,
-    "InstName" : "jtagBridge_1",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 4795,
-    "ModuleName" : "JtagBridge",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 4923,
-      "InstName" : "flowCCUnsafeByToggle_1",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 14051,
-      "ModuleName" : "FlowCCUnsafeByToggle",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 14076,
-        "InstName" : "inputArea_target_buffercc",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18531,
-        "ModuleName" : "BufferCC_6"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1116,
-    "InstName" : "systemDebugger_1",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 4708,
-    "ModuleName" : "SystemDebugger"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1136,
-    "InstName" : "axi4ReadOnlyDecoder_2",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 4483,
-    "ModuleName" : "Axi4ReadOnlyDecoder",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 4567,
-      "InstName" : "errorSlave",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13992,
-      "ModuleName" : "Axi4ReadOnlyErrorSlave_1"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1188,
-    "InstName" : "dbus_axi_decoder",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 4071,
-    "ModuleName" : "Axi4SharedDecoder",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 4238,
-      "InstName" : "errorSlave",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13903,
-      "ModuleName" : "Axi4SharedErrorSlave"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1297,
-    "InstName" : "axi_vgaCtrl_io_axi_decoder",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 3900,
-    "ModuleName" : "Axi4ReadOnlyDecoder_1",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3965,
-      "InstName" : "errorSlave",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13846,
-      "ModuleName" : "Axi4ReadOnlyErrorSlave"
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1334,
-    "InstName" : "axi_ram_io_axi_arbiter",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 3572,
-    "ModuleName" : "Axi4SharedArbiter",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3721,
-      "InstName" : "cmdArbiter",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13752,
-      "ModuleName" : "StreamArbiter_3"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3751,
-      "InstName" : "cmdRouteFork_thrown_translated_fifo",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13717,
-      "ModuleName" : "StreamFifoLowLatency_3",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 13734,
-        "InstName" : "fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18437,
-        "ModuleName" : "StreamFifo_5"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1397,
-    "InstName" : "axi_sdramCtrl_io_axi_arbiter",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 3195,
-    "ModuleName" : "Axi4SharedArbiter_1",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3367,
-      "InstName" : "cmdArbiter",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13568,
-      "ModuleName" : "StreamArbiter_2"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3405,
-      "InstName" : "cmdRouteFork_thrown_translated_fifo",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13717,
-      "ModuleName" : "StreamFifoLowLatency_3",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 13734,
-        "InstName" : "fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18437,
-        "ModuleName" : "StreamFifo_5"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1473,
-    "InstName" : "axi_ddr3Ctrl_io_axi_arbiter",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 2818,
-    "ModuleName" : "Axi4SharedArbiter_2",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 2990,
-      "InstName" : "cmdArbiter",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13417,
-      "ModuleName" : "StreamArbiter_1"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 3028,
-      "InstName" : "cmdRouteFork_thrown_translated_fifo",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13717,
-      "ModuleName" : "StreamFifoLowLatency_3",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 13734,
-        "InstName" : "fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18437,
-        "ModuleName" : "StreamFifo_5"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1549,
-    "InstName" : "axi_apbBridge_io_axi_arbiter",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 2556,
-    "ModuleName" : "Axi4SharedArbiter_3",
-    "SubInsts" : [
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 2672,
-      "InstName" : "cmdArbiter",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13341,
-      "ModuleName" : "StreamArbiter"
-     },
-     {
-      "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "InstLine" : 2693,
-      "InstName" : "cmdRouteFork_thrown_translated_fifo",
-      "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-      "ModuleLine" : 13717,
-      "ModuleName" : "StreamFifoLowLatency_3",
-      "SubInsts" : [
-       {
-        "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "InstLine" : 13734,
-        "InstName" : "fifo",
-        "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-        "ModuleLine" : 18437,
-        "ModuleName" : "StreamFifo_5"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1599,
-    "InstName" : "io_apb_decoder",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 2505,
-    "ModuleName" : "Apb3Decoder"
-   },
-   {
-    "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "InstLine" : 1617,
-    "InstName" : "apb3Router_1",
-    "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
-    "ModuleLine" : 2394,
-    "ModuleName" : "Apb3Router"
    }
   ]
- },
- {
-  "InstFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/gowin_pll/gowin_pll.v",
-  "InstLine" : 10,
-  "InstName" : "Gowin_PLL",
-  "ModuleFile" : "/home/shaw/GW/IDE/bin/fpga_project/src/gowin_pll/gowin_pll.v",
-  "ModuleLine" : 10,
-  "ModuleName" : "Gowin_PLL"
  }
 ]

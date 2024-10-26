@@ -2,23 +2,23 @@
  "Device" : "GW5AST-138B",
  "Files" : [
   {
-   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/Briey.v",
+   "Path" : "D:/File_Tmp/VEXRSICV/fpga_project/src/Briey.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
+   "Path" : "D:/File_Tmp/VEXRSICV/fpga_project/src/ddr3_memory_interface/ddr3_memory_interface.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
+   "Path" : "D:/File_Tmp/VEXRSICV/fpga_project/src/gowin_pll_DDR3/gowin_pll_DDR3.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/toplevel.v",
+   "Path" : "D:/File_Tmp/VEXRSICV/fpga_project/src/spi_flash_interface/spi_flash_interface.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/home/shaw/GW/IDE/bin/fpga_project/src/gowin_pll/gowin_pll.v",
+   "Path" : "D:/File_Tmp/VEXRSICV/fpga_project/src/toplevel.v",
    "Type" : "verilog"
   }
  ],
@@ -26,7 +26,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "/home/shaw/GW/IDE/bin/fpga_project/impl/temp/rtl_parser.result",
+ "ResultFile" : "D:/File_Tmp/VEXRSICV/fpga_project/impl/temp/rtl_parser.result",
  "Top" : "toplevel",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
