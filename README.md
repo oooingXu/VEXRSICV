@@ -12,6 +12,8 @@
 
   存储器方面使用高云DDR3 Memory Interface软核,参考[GowinDDR3_AXI4_SpinalHDL](https://github.com/PaserTech-Hardware/GowinDDR3_AXI4_SpinalHDL.git)进行核心总线与DDR3控制器之间耦合.
 
+  使用板载外部存储器flash,高云[spi_flash_interface ip](fpga_project/src/spi_flash_interface)提供与flash读写控制功能并且兼容apb总线端口
+
   FPGA项目主要文件: [verilog file](fpga_project/src)(\*.v)
   ,[netlist file](fpga_project/impl/gwsynthesis)(\*.vg)
   ,[physical constraints file](fpga_project/src)(\*.cst)
