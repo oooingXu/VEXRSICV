@@ -26,7 +26,8 @@ utils.o: \
  /home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/software/include/generated/soc.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/cores/cpu/vexriscv/system.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/cores/cpu/vexriscv/csr-defs.h \
- /home/furiosa/litex/FPGA/litex/litex/soc/software/include/hw/common.h
+ /home/furiosa/litex/FPGA/litex/litex/soc/software/include/hw/common.h \
+ /home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/software/include/generated/sdram_phy.h
 /home/furiosa/litex/FPGA/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio/stdio.h:
 /home/furiosa/litex/FPGA/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/inttypes.h:
 /home/furiosa/litex/FPGA/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/newlib.h:
@@ -54,3 +55,4 @@ utils.o: \
 /home/furiosa/litex/FPGA/litex/litex/soc/cores/cpu/vexriscv/system.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/cores/cpu/vexriscv/csr-defs.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/software/include/hw/common.h:
+/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/software/include/generated/sdram_phy.h:

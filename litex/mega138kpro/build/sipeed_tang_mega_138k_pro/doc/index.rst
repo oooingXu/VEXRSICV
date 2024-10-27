@@ -19,8 +19,10 @@ Register Groups
     :maxdepth: 1
 
     ctrl
+    ddrphy
     identifier_mem
     leds
+    sdram
     timer0
     uart
 
