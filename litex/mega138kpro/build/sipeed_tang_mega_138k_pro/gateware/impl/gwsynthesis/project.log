@@ -1,0 +1,75 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v'
+Analyzing Verilog file '/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v'
+Compiling module 'sipeed_tang_mega_138k_pro'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":21)
+WARN  (EX3780) : Using initial value of 'builder_interface0_err' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":259)
+WARN  (EX3780) : Using initial value of 'main_basesoc_basesoc_adr_burst' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":293)
+WARN  (EX3780) : Using initial value of 'main_basesoc_basesoc_ram_bus_err' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":302)
+WARN  (EX3780) : Using initial value of 'main_basesoc_ram_adr_burst' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":336)
+WARN  (EX3780) : Using initial value of 'main_basesoc_ram_bus_ram_bus_err' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":344)
+WARN  (EX3780) : Using initial value of 'main_basesoc_rx_source_first' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":364)
+WARN  (EX3780) : Using initial value of 'main_basesoc_rx_source_last' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":365)
+WARN  (EX3780) : Using initial value of 'main_basesoc_uart_rx_fifo_replace' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":446)
+WARN  (EX3780) : Using initial value of 'main_basesoc_uart_tx_fifo_replace' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":504)
+WARN  (EX3780) : Using initial value of 'main_basesoc_uart_tx_fifo_sink_first' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":505)
+WARN  (EX3780) : Using initial value of 'main_basesoc_uart_tx_fifo_sink_last' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":506)
+WARN  (EX3780) : Using initial value of 'main_basesoc_vexriscv' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":545)
+WARN  (EX3780) : Using initial value of 'por_rst' since it is never assigned("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":562)
+Extracting RAM for identifier 'rom'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1639)
+Extracting RAM for identifier 'sram'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1654)
+Extracting RAM for identifier 'mem'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1677)
+Extracting RAM for identifier 'storage'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1693)
+Extracting RAM for identifier 'storage_1'("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1714)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 1("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":676)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":886)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1415)
+Compiling module 'VexRiscv'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":7)
+Extracting RAM for identifier 'RegFilePlugin_regFile'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":1323)
+Compiling module 'InstructionCache'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":6021)
+Extracting RAM for identifier 'banks_0'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":6127)
+Extracting RAM for identifier 'ways_0_tags'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":6128)
+Compiling module 'DataCache'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5167)
+Extracting RAM for identifier 'ways_0_tags'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5381)
+Extracting RAM for identifier 'ways_0_data_symbol0'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5382)
+Extracting RAM for identifier 'ways_0_data_symbol1'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5383)
+Extracting RAM for identifier 'ways_0_data_symbol2'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5384)
+Extracting RAM for identifier 'ways_0_data_symbol3'("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5385)
+WARN  (EX3858) : System task 'display' is ignored for synthesis("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5993)
+WARN  (EX1998) : Net 'IBusCachedPlugin_cache_io_cpu_fetch_isRemoved' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":67)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_SW' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":81)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_SR' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":82)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_SO' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":83)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_SI' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":84)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_PW' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":85)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_PR' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":86)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_PO' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":87)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_PI' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":88)
+WARN  (EX1998) : Net 'dataCache_1_io_cpu_writeBack_fence_FM[3]' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":89)
+WARN  (EX1998) : Net 'IBusCachedPlugin_mmuBus_rsp_bypassTranslation' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":604)
+WARN  (EX1998) : Net 'dBus_rsp_payload_last' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":617)
+WARN  (EX1998) : Net 'DBusCachedPlugin_mmuBus_rsp_bypassTranslation' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":632)
+WARN  (EX1998) : Net 'CsrPlugin_mtvec_mode[1]' does not have a driver("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":930)
+NOTE  (EX0101) : Current top module is "sipeed_tang_mega_138k_pro"
+WARN  (EX0346) : Instance "PLL" 's parameter value "1'b0" truncated to "2'b00" to fit 2 bits("/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/sipeed_tang_mega_138k_pro.v":1875)
+WARN  (EX0211) : The output port "io_cpu_writeBack_exclusiveOk" of module "DataCache" has no driver, assigning undriven bits to Z, simulation mismatch possible("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5210)
+WARN  (EX0211) : The output port "io_cpu_writesPending" of module "DataCache" has no driver, assigning undriven bits to Z, simulation mismatch possible("/home/furiosa/litex/FPGA/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv.v":5216)
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/impl/gwsynthesis/project.vg" completed
+[100%] Generate report file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/impl/gwsynthesis/project_syn.rpt.html" completed
+GowinSynthesis finish

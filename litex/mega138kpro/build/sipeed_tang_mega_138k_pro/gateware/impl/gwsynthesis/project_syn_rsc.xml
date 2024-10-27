@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="sipeed_tang_mega_138k_pro" Register="514" Alu="96" Lut="709" Bsram="20" Ssram="4">
+    <SubModule name="VexRiscv" Register="1109" Alu="309" Lut="2258" MULTALU27X18="4" Bsram="2">
+        <SubModule name="IBusCachedPlugin_cache" Register="75" Alu="26" Lut="47" Bsram="3"/>
+        <SubModule name="dataCache_1" Register="61" Alu="39" Lut="109" Bsram="5"/>
+    </SubModule>
+</Module>
