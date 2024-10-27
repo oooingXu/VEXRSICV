@@ -20,11 +20,13 @@ Register Groups
 
     ctrl
     ddrphy
+    ethphy
     identifier_mem
     leds
     sdram
     timer0
     uart
+    watchdog0
 
 Indices and tables
 ==================
