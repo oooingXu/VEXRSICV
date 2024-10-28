@@ -191,7 +191,7 @@ class Briey(val config: BrieyConfig) extends Component{
     //Peripherals IO
     val gpioA         = master(TriStateArray(32 bits))
     //val gpioB         = master(TriStateArray(32 bits))
-    val flash      = master(Flash_Interface())
+    //val flash      = master(Flash_Interface())
     val uart          = master(Uart())
     val vga           = master(Vga(vgaRgbConfig))
     val timerExternal = in(PinsecTimerCtrlExternal())
@@ -270,7 +270,7 @@ class Briey(val config: BrieyConfig) extends Component{
     )
 
     val apbBridge = Axi4SharedToApb3Bridge(
-      addressWidth = 28,
+      addressWidth = 20,
       dataWidth    = 32,
       idWidth      = 4
     )
@@ -283,10 +283,10 @@ class Briey(val config: BrieyConfig) extends Component{
       gpioWidth = 32,
       withReadSync = true
     )*/
-    val flashCtrl = Paski_GowinFlash(
+    /*val flashCtrl = Paski_GowinFlash(
       sys_clk = axiClockDomain,
       mem_clk = spi_clock
-    )
+    )*/
     val timerCtrl = PinsecTimerCtrl()
 
 
@@ -397,19 +397,19 @@ class Briey(val config: BrieyConfig) extends Component{
     val apbDecoder = Apb3Decoder(
       master = apbBridge.io.apb,
       slaves = List(
-        gpioACtrl.io.apb -> (0x0000000, 4  kB),
+        gpioACtrl.io.apb -> (0x00000, 4  kB),
         //gpioBCtrl.io.apb -> (0x01000, 4  kB),
-        flashCtrl.io.apb -> (0x2000000, 16 MB),
-        uartCtrl.io.apb  -> (0x4000000, 4  kB),
-        timerCtrl.io.apb -> (0x6000000, 4  kB),
-        vgaCtrl.io.apb   -> (0x8000000, 4  kB)
+        //flashCtrl.io.apb -> (0x2000000, 16 MB),
+        uartCtrl.io.apb  -> (0x10000, 4  kB),
+        timerCtrl.io.apb -> (0x20000, 4  kB),
+        vgaCtrl.io.apb   -> (0x30000, 4  kB)
       )
     )
   }
 
   io.gpioA          <> axi.gpioACtrl.io.gpio
   //io.gpioB          <> axi.gpioBCtrl.io.gpio
-  io.flash          <> axi.flashCtrl.io.flash_iface
+  //io.flash          <> axi.flashCtrl.io.flash_iface
   io.timerExternal  <> axi.timerCtrl.io.external
   io.uart           <> axi.uartCtrl.io.uart
   //io.sdram          <> axi.sdramCtrl.io.sdram

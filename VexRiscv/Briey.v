@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.10.1    git head : 2527c7c6b0fb0f95e5e1a5722a0be732b364ce43
 // Component : Briey
-// Git hash  : ce4924337e07751abb147f45732e85b6e37925f5
+// Git hash  : 428d7cd402ecd6c56d713619f6a6dbd41d3cd110
 
 `timescale 1ns/1ps
 
@@ -32,12 +32,6 @@ module Briey (
   input  wire [31:0]   io_gpioA_read,
   output wire [31:0]   io_gpioA_write,
   output wire [31:0]   io_gpioA_writeEnable,
-  output wire          io_flash_O_flash_ck,
-  output wire          io_flash_O_flash_cs_n,
-  inout  wire          io_flash_IO_flash_hold_n,
-  inout  wire          io_flash_IO_flash_wp_n,
-  inout  wire          io_flash_IO_flash_do,
-  inout  wire          io_flash_IO_flash_di,
   output wire          io_uart_txd,
   input  wire          io_uart_rxd,
   output wire          io_vga_vSync,
@@ -49,13 +43,10 @@ module Briey (
   input  wire          io_timerExternal_clear,
   input  wire          io_timerExternal_tick,
   input  wire          io_coreInterrupt,
-  input  wire          mem_clk_clk,
-  input  wire          spi_clock_resetn,
-  input  wire          spi_clock_clk
+  input  wire          mem_clk_clk
 );
 
   wire       [3:0]    axi_gpioACtrl_io_apb_PADDR;
-  wire       [23:0]   axi_flashCtrl_io_apb_PADDR;
   wire       [7:0]    axi_timerCtrl_io_apb_PADDR;
   wire       [4:0]    axi_uartCtrl_io_apb_PADDR;
   wire                axi_vgaCtrl_io_axi_ar_ready;
@@ -86,13 +77,12 @@ module Briey (
   wire       [26:0]   axi_ddr3Ctrl_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr;
   wire       [1:0]    axi_ddr3Ctrl_io_axi_arbiter_io_sharedInputs_0_arw_payload_burst;
   wire                axi_ddr3Ctrl_io_axi_arbiter_io_output_arw_ready;
-  wire       [27:0]   axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr;
+  wire       [19:0]   axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr;
   wire       [1:0]    axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_burst;
   wire                axi_apbBridge_io_axi_arbiter_io_output_arw_ready;
   wire                axi_apbBridge_io_axi_arbiter_io_output_w_ready;
   wire                apb3Router_1_io_outputs_1_PSLVERROR;
-  wire                apb3Router_1_io_outputs_2_PSLVERROR;
-  wire                apb3Router_1_io_outputs_4_PSLVERROR;
+  wire                apb3Router_1_io_outputs_3_PSLVERROR;
   wire                io_asyncReset_buffercc_io_dataOut;
   wire                resetCtrl_axiReset_buffercc_io_dataOut;
   wire                axi_ram_io_axi_arw_ready;
@@ -138,7 +128,7 @@ module Briey (
   wire       [3:0]    axi_apbBridge_io_axi_r_payload_id;
   wire       [1:0]    axi_apbBridge_io_axi_r_payload_resp;
   wire                axi_apbBridge_io_axi_r_payload_last;
-  wire       [27:0]   axi_apbBridge_io_apb_PADDR;
+  wire       [19:0]   axi_apbBridge_io_apb_PADDR;
   wire       [0:0]    axi_apbBridge_io_apb_PSEL;
   wire                axi_apbBridge_io_apb_PENABLE;
   wire                axi_apbBridge_io_apb_PWRITE;
@@ -149,10 +139,6 @@ module Briey (
   wire       [31:0]   axi_gpioACtrl_io_gpio_write;
   wire       [31:0]   axi_gpioACtrl_io_gpio_writeEnable;
   wire       [31:0]   axi_gpioACtrl_io_value;
-  wire                axi_flashCtrl_io_apb_PREADY;
-  wire       [31:0]   axi_flashCtrl_io_apb_PRDATA;
-  wire                axi_flashCtrl_io_flash_iface_O_flash_ck;
-  wire                axi_flashCtrl_io_flash_iface_O_flash_cs_n;
   wire                axi_timerCtrl_io_apb_PREADY;
   wire       [31:0]   axi_timerCtrl_io_apb_PRDATA;
   wire                axi_timerCtrl_io_apb_PSLVERROR;
@@ -370,7 +356,7 @@ module Briey (
   wire       [1:0]    axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_r_payload_resp;
   wire                axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_r_payload_last;
   wire                axi_apbBridge_io_axi_arbiter_io_output_arw_valid;
-  wire       [27:0]   axi_apbBridge_io_axi_arbiter_io_output_arw_payload_addr;
+  wire       [19:0]   axi_apbBridge_io_axi_arbiter_io_output_arw_payload_addr;
   wire       [3:0]    axi_apbBridge_io_axi_arbiter_io_output_arw_payload_id;
   wire       [7:0]    axi_apbBridge_io_axi_arbiter_io_output_arw_payload_len;
   wire       [2:0]    axi_apbBridge_io_axi_arbiter_io_output_arw_payload_size;
@@ -385,39 +371,34 @@ module Briey (
   wire                io_apb_decoder_io_input_PREADY;
   wire       [31:0]   io_apb_decoder_io_input_PRDATA;
   wire                io_apb_decoder_io_input_PSLVERROR;
-  wire       [27:0]   io_apb_decoder_io_output_PADDR;
-  wire       [4:0]    io_apb_decoder_io_output_PSEL;
+  wire       [19:0]   io_apb_decoder_io_output_PADDR;
+  wire       [3:0]    io_apb_decoder_io_output_PSEL;
   wire                io_apb_decoder_io_output_PENABLE;
   wire                io_apb_decoder_io_output_PWRITE;
   wire       [31:0]   io_apb_decoder_io_output_PWDATA;
   wire                apb3Router_1_io_input_PREADY;
   wire       [31:0]   apb3Router_1_io_input_PRDATA;
   wire                apb3Router_1_io_input_PSLVERROR;
-  wire       [27:0]   apb3Router_1_io_outputs_0_PADDR;
+  wire       [19:0]   apb3Router_1_io_outputs_0_PADDR;
   wire       [0:0]    apb3Router_1_io_outputs_0_PSEL;
   wire                apb3Router_1_io_outputs_0_PENABLE;
   wire                apb3Router_1_io_outputs_0_PWRITE;
   wire       [31:0]   apb3Router_1_io_outputs_0_PWDATA;
-  wire       [27:0]   apb3Router_1_io_outputs_1_PADDR;
+  wire       [19:0]   apb3Router_1_io_outputs_1_PADDR;
   wire       [0:0]    apb3Router_1_io_outputs_1_PSEL;
   wire                apb3Router_1_io_outputs_1_PENABLE;
   wire                apb3Router_1_io_outputs_1_PWRITE;
   wire       [31:0]   apb3Router_1_io_outputs_1_PWDATA;
-  wire       [27:0]   apb3Router_1_io_outputs_2_PADDR;
+  wire       [19:0]   apb3Router_1_io_outputs_2_PADDR;
   wire       [0:0]    apb3Router_1_io_outputs_2_PSEL;
   wire                apb3Router_1_io_outputs_2_PENABLE;
   wire                apb3Router_1_io_outputs_2_PWRITE;
   wire       [31:0]   apb3Router_1_io_outputs_2_PWDATA;
-  wire       [27:0]   apb3Router_1_io_outputs_3_PADDR;
+  wire       [19:0]   apb3Router_1_io_outputs_3_PADDR;
   wire       [0:0]    apb3Router_1_io_outputs_3_PSEL;
   wire                apb3Router_1_io_outputs_3_PENABLE;
   wire                apb3Router_1_io_outputs_3_PWRITE;
   wire       [31:0]   apb3Router_1_io_outputs_3_PWDATA;
-  wire       [27:0]   apb3Router_1_io_outputs_4_PADDR;
-  wire       [0:0]    apb3Router_1_io_outputs_4_PSEL;
-  wire                apb3Router_1_io_outputs_4_PENABLE;
-  wire                apb3Router_1_io_outputs_4_PWRITE;
-  wire       [31:0]   apb3Router_1_io_outputs_4_PWDATA;
   wire       [2:0]    _zz_dbus_axi_arw_payload_len;
   reg                 resetCtrl_systemResetUnbuffered;
   reg        [5:0]    resetCtrl_systemResetCounter;
@@ -700,7 +681,7 @@ module Briey (
   wire       [3:0]    _zz_io_sharedInputs_0_arw_payload_id_2;
   wire                toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_valid;
   wire                toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_ready;
-  wire       [27:0]   toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_addr;
+  wire       [19:0]   toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_addr;
   wire       [3:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_id;
   wire       [7:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_len;
   wire       [2:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_size;
@@ -708,7 +689,7 @@ module Briey (
   wire                toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_write;
   reg                 toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rValid;
   wire                toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_fire;
-  reg        [27:0]   toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rData_addr;
+  reg        [19:0]   toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rData_addr;
   reg        [3:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rData_id;
   reg        [7:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rData_len;
   reg        [2:0]    toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_rData_size;
@@ -811,7 +792,7 @@ module Briey (
   Axi4SharedToApb3Bridge axi_apbBridge (
     .io_axi_arw_valid         (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_valid             ), //i
     .io_axi_arw_ready         (axi_apbBridge_io_axi_arw_ready                                                 ), //o
-    .io_axi_arw_payload_addr  (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_addr[27:0]), //i
+    .io_axi_arw_payload_addr  (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_addr[19:0]), //i
     .io_axi_arw_payload_id    (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_id[3:0]   ), //i
     .io_axi_arw_payload_len   (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_len[7:0]  ), //i
     .io_axi_arw_payload_size  (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_payload_size[2:0] ), //i
@@ -832,7 +813,7 @@ module Briey (
     .io_axi_r_payload_id      (axi_apbBridge_io_axi_r_payload_id[3:0]                                         ), //o
     .io_axi_r_payload_resp    (axi_apbBridge_io_axi_r_payload_resp[1:0]                                       ), //o
     .io_axi_r_payload_last    (axi_apbBridge_io_axi_r_payload_last                                            ), //o
-    .io_apb_PADDR             (axi_apbBridge_io_apb_PADDR[27:0]                                               ), //o
+    .io_apb_PADDR             (axi_apbBridge_io_apb_PADDR[19:0]                                               ), //o
     .io_apb_PSEL              (axi_apbBridge_io_apb_PSEL                                                      ), //o
     .io_apb_PENABLE           (axi_apbBridge_io_apb_PENABLE                                                   ), //o
     .io_apb_PREADY            (io_apb_decoder_io_input_PREADY                                                 ), //i
@@ -859,32 +840,13 @@ module Briey (
     .io_axiClk           (io_axiClk                              ), //i
     .resetCtrl_axiReset  (resetCtrl_axiReset                     )  //i
   );
-  Paski_GowinFlash axi_flashCtrl (
-    .resetCtrl_axiReset             (resetCtrl_axiReset                       ), //i
-    .io_axiClk                      (io_axiClk                                ), //i
-    .spi_clock_resetn               (spi_clock_resetn                         ), //i
-    .spi_clock_clk                  (spi_clock_clk                            ), //i
-    .io_apb_PADDR                   (axi_flashCtrl_io_apb_PADDR[23:0]         ), //i
-    .io_apb_PSEL                    (apb3Router_1_io_outputs_1_PSEL           ), //i
-    .io_apb_PENABLE                 (apb3Router_1_io_outputs_1_PENABLE        ), //i
-    .io_apb_PREADY                  (axi_flashCtrl_io_apb_PREADY              ), //o
-    .io_apb_PWRITE                  (apb3Router_1_io_outputs_1_PWRITE         ), //i
-    .io_apb_PWDATA                  (apb3Router_1_io_outputs_1_PWDATA[31:0]   ), //i
-    .io_apb_PRDATA                  (axi_flashCtrl_io_apb_PRDATA[31:0]        ), //o
-    .io_flash_iface_O_flash_ck      (axi_flashCtrl_io_flash_iface_O_flash_ck  ), //o
-    .io_flash_iface_O_flash_cs_n    (axi_flashCtrl_io_flash_iface_O_flash_cs_n), //o
-    .io_flash_iface_IO_flash_hold_n ({io_flash_IO_flash_hold_n}),
-    .io_flash_iface_IO_flash_wp_n   ({io_flash_IO_flash_wp_n}),
-    .io_flash_iface_IO_flash_do     ({io_flash_IO_flash_do}),
-    .io_flash_iface_IO_flash_di     ({io_flash_IO_flash_di}) 
-  );
   PinsecTimerCtrl axi_timerCtrl (
     .io_apb_PADDR       (axi_timerCtrl_io_apb_PADDR[7:0]       ), //i
-    .io_apb_PSEL        (apb3Router_1_io_outputs_3_PSEL        ), //i
-    .io_apb_PENABLE     (apb3Router_1_io_outputs_3_PENABLE     ), //i
+    .io_apb_PSEL        (apb3Router_1_io_outputs_2_PSEL        ), //i
+    .io_apb_PENABLE     (apb3Router_1_io_outputs_2_PENABLE     ), //i
     .io_apb_PREADY      (axi_timerCtrl_io_apb_PREADY           ), //o
-    .io_apb_PWRITE      (apb3Router_1_io_outputs_3_PWRITE      ), //i
-    .io_apb_PWDATA      (apb3Router_1_io_outputs_3_PWDATA[31:0]), //i
+    .io_apb_PWRITE      (apb3Router_1_io_outputs_2_PWRITE      ), //i
+    .io_apb_PWDATA      (apb3Router_1_io_outputs_2_PWDATA[31:0]), //i
     .io_apb_PRDATA      (axi_timerCtrl_io_apb_PRDATA[31:0]     ), //o
     .io_apb_PSLVERROR   (axi_timerCtrl_io_apb_PSLVERROR        ), //o
     .io_external_clear  (io_timerExternal_clear                ), //i
@@ -895,11 +857,11 @@ module Briey (
   );
   Apb3UartCtrl axi_uartCtrl (
     .io_apb_PADDR       (axi_uartCtrl_io_apb_PADDR[4:0]        ), //i
-    .io_apb_PSEL        (apb3Router_1_io_outputs_2_PSEL        ), //i
-    .io_apb_PENABLE     (apb3Router_1_io_outputs_2_PENABLE     ), //i
+    .io_apb_PSEL        (apb3Router_1_io_outputs_1_PSEL        ), //i
+    .io_apb_PENABLE     (apb3Router_1_io_outputs_1_PENABLE     ), //i
     .io_apb_PREADY      (axi_uartCtrl_io_apb_PREADY            ), //o
-    .io_apb_PWRITE      (apb3Router_1_io_outputs_2_PWRITE      ), //i
-    .io_apb_PWDATA      (apb3Router_1_io_outputs_2_PWDATA[31:0]), //i
+    .io_apb_PWRITE      (apb3Router_1_io_outputs_1_PWRITE      ), //i
+    .io_apb_PWDATA      (apb3Router_1_io_outputs_1_PWDATA[31:0]), //i
     .io_apb_PRDATA      (axi_uartCtrl_io_apb_PRDATA[31:0]      ), //o
     .io_uart_txd        (axi_uartCtrl_io_uart_txd              ), //o
     .io_uart_rxd        (io_uart_rxd                           ), //i
@@ -920,11 +882,11 @@ module Briey (
     .io_axi_r_payload_data   (axi_vgaCtrl_io_axi_decoder_io_input_r_payload_data[31:0]), //i
     .io_axi_r_payload_last   (axi_vgaCtrl_io_axi_decoder_io_input_r_payload_last      ), //i
     .io_apb_PADDR            (axi_vgaCtrl_io_apb_PADDR[7:0]                           ), //i
-    .io_apb_PSEL             (apb3Router_1_io_outputs_4_PSEL                          ), //i
-    .io_apb_PENABLE          (apb3Router_1_io_outputs_4_PENABLE                       ), //i
+    .io_apb_PSEL             (apb3Router_1_io_outputs_3_PSEL                          ), //i
+    .io_apb_PENABLE          (apb3Router_1_io_outputs_3_PENABLE                       ), //i
     .io_apb_PREADY           (axi_vgaCtrl_io_apb_PREADY                               ), //o
-    .io_apb_PWRITE           (apb3Router_1_io_outputs_4_PWRITE                        ), //i
-    .io_apb_PWDATA           (apb3Router_1_io_outputs_4_PWDATA[31:0]                  ), //i
+    .io_apb_PWRITE           (apb3Router_1_io_outputs_3_PWRITE                        ), //i
+    .io_apb_PWDATA           (apb3Router_1_io_outputs_3_PWDATA[31:0]                  ), //i
     .io_apb_PRDATA           (axi_vgaCtrl_io_apb_PRDATA[31:0]                         ), //o
     .io_vga_vSync            (axi_vgaCtrl_io_vga_vSync                                ), //o
     .io_vga_hSync            (axi_vgaCtrl_io_vga_hSync                                ), //o
@@ -1334,7 +1296,7 @@ module Briey (
   Axi4SharedArbiter_2 axi_apbBridge_io_axi_arbiter (
     .io_sharedInputs_0_arw_valid         (toplevel_dbus_axi_decoder_io_sharedOutputs_1_arw_validPipe_valid            ), //i
     .io_sharedInputs_0_arw_ready         (axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_ready                    ), //o
-    .io_sharedInputs_0_arw_payload_addr  (axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr[27:0]       ), //i
+    .io_sharedInputs_0_arw_payload_addr  (axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr[19:0]       ), //i
     .io_sharedInputs_0_arw_payload_id    (_zz_io_sharedInputs_0_arw_payload_id_2[3:0]                                 ), //i
     .io_sharedInputs_0_arw_payload_len   (toplevel_dbus_axi_decoder_io_sharedOutputs_1_arw_validPipe_payload_len[7:0] ), //i
     .io_sharedInputs_0_arw_payload_size  (toplevel_dbus_axi_decoder_io_sharedOutputs_1_arw_validPipe_payload_size[2:0]), //i
@@ -1357,7 +1319,7 @@ module Briey (
     .io_sharedInputs_0_r_payload_last    (axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_r_payload_last               ), //o
     .io_output_arw_valid                 (axi_apbBridge_io_axi_arbiter_io_output_arw_valid                            ), //o
     .io_output_arw_ready                 (axi_apbBridge_io_axi_arbiter_io_output_arw_ready                            ), //i
-    .io_output_arw_payload_addr          (axi_apbBridge_io_axi_arbiter_io_output_arw_payload_addr[27:0]               ), //o
+    .io_output_arw_payload_addr          (axi_apbBridge_io_axi_arbiter_io_output_arw_payload_addr[19:0]               ), //o
     .io_output_arw_payload_id            (axi_apbBridge_io_axi_arbiter_io_output_arw_payload_id[3:0]                  ), //o
     .io_output_arw_payload_len           (axi_apbBridge_io_axi_arbiter_io_output_arw_payload_len[7:0]                 ), //o
     .io_output_arw_payload_size          (axi_apbBridge_io_axi_arbiter_io_output_arw_payload_size[2:0]                ), //o
@@ -1382,7 +1344,7 @@ module Briey (
     .resetCtrl_axiReset                  (resetCtrl_axiReset                                                          )  //i
   );
   Apb3Decoder io_apb_decoder (
-    .io_input_PADDR      (axi_apbBridge_io_apb_PADDR[27:0]     ), //i
+    .io_input_PADDR      (axi_apbBridge_io_apb_PADDR[19:0]     ), //i
     .io_input_PSEL       (axi_apbBridge_io_apb_PSEL            ), //i
     .io_input_PENABLE    (axi_apbBridge_io_apb_PENABLE         ), //i
     .io_input_PREADY     (io_apb_decoder_io_input_PREADY       ), //o
@@ -1390,8 +1352,8 @@ module Briey (
     .io_input_PWDATA     (axi_apbBridge_io_apb_PWDATA[31:0]    ), //i
     .io_input_PRDATA     (io_apb_decoder_io_input_PRDATA[31:0] ), //o
     .io_input_PSLVERROR  (io_apb_decoder_io_input_PSLVERROR    ), //o
-    .io_output_PADDR     (io_apb_decoder_io_output_PADDR[27:0] ), //o
-    .io_output_PSEL      (io_apb_decoder_io_output_PSEL[4:0]   ), //o
+    .io_output_PADDR     (io_apb_decoder_io_output_PADDR[19:0] ), //o
+    .io_output_PSEL      (io_apb_decoder_io_output_PSEL[3:0]   ), //o
     .io_output_PENABLE   (io_apb_decoder_io_output_PENABLE     ), //o
     .io_output_PREADY    (apb3Router_1_io_input_PREADY         ), //i
     .io_output_PWRITE    (io_apb_decoder_io_output_PWRITE      ), //o
@@ -1400,15 +1362,15 @@ module Briey (
     .io_output_PSLVERROR (apb3Router_1_io_input_PSLVERROR      )  //i
   );
   Apb3Router apb3Router_1 (
-    .io_input_PADDR         (io_apb_decoder_io_output_PADDR[27:0]  ), //i
-    .io_input_PSEL          (io_apb_decoder_io_output_PSEL[4:0]    ), //i
+    .io_input_PADDR         (io_apb_decoder_io_output_PADDR[19:0]  ), //i
+    .io_input_PSEL          (io_apb_decoder_io_output_PSEL[3:0]    ), //i
     .io_input_PENABLE       (io_apb_decoder_io_output_PENABLE      ), //i
     .io_input_PREADY        (apb3Router_1_io_input_PREADY          ), //o
     .io_input_PWRITE        (io_apb_decoder_io_output_PWRITE       ), //i
     .io_input_PWDATA        (io_apb_decoder_io_output_PWDATA[31:0] ), //i
     .io_input_PRDATA        (apb3Router_1_io_input_PRDATA[31:0]    ), //o
     .io_input_PSLVERROR     (apb3Router_1_io_input_PSLVERROR       ), //o
-    .io_outputs_0_PADDR     (apb3Router_1_io_outputs_0_PADDR[27:0] ), //o
+    .io_outputs_0_PADDR     (apb3Router_1_io_outputs_0_PADDR[19:0] ), //o
     .io_outputs_0_PSEL      (apb3Router_1_io_outputs_0_PSEL        ), //o
     .io_outputs_0_PENABLE   (apb3Router_1_io_outputs_0_PENABLE     ), //o
     .io_outputs_0_PREADY    (axi_gpioACtrl_io_apb_PREADY           ), //i
@@ -1416,38 +1378,30 @@ module Briey (
     .io_outputs_0_PWDATA    (apb3Router_1_io_outputs_0_PWDATA[31:0]), //o
     .io_outputs_0_PRDATA    (axi_gpioACtrl_io_apb_PRDATA[31:0]     ), //i
     .io_outputs_0_PSLVERROR (axi_gpioACtrl_io_apb_PSLVERROR        ), //i
-    .io_outputs_1_PADDR     (apb3Router_1_io_outputs_1_PADDR[27:0] ), //o
+    .io_outputs_1_PADDR     (apb3Router_1_io_outputs_1_PADDR[19:0] ), //o
     .io_outputs_1_PSEL      (apb3Router_1_io_outputs_1_PSEL        ), //o
     .io_outputs_1_PENABLE   (apb3Router_1_io_outputs_1_PENABLE     ), //o
-    .io_outputs_1_PREADY    (axi_flashCtrl_io_apb_PREADY           ), //i
+    .io_outputs_1_PREADY    (axi_uartCtrl_io_apb_PREADY            ), //i
     .io_outputs_1_PWRITE    (apb3Router_1_io_outputs_1_PWRITE      ), //o
     .io_outputs_1_PWDATA    (apb3Router_1_io_outputs_1_PWDATA[31:0]), //o
-    .io_outputs_1_PRDATA    (axi_flashCtrl_io_apb_PRDATA[31:0]     ), //i
+    .io_outputs_1_PRDATA    (axi_uartCtrl_io_apb_PRDATA[31:0]      ), //i
     .io_outputs_1_PSLVERROR (apb3Router_1_io_outputs_1_PSLVERROR   ), //i
-    .io_outputs_2_PADDR     (apb3Router_1_io_outputs_2_PADDR[27:0] ), //o
+    .io_outputs_2_PADDR     (apb3Router_1_io_outputs_2_PADDR[19:0] ), //o
     .io_outputs_2_PSEL      (apb3Router_1_io_outputs_2_PSEL        ), //o
     .io_outputs_2_PENABLE   (apb3Router_1_io_outputs_2_PENABLE     ), //o
-    .io_outputs_2_PREADY    (axi_uartCtrl_io_apb_PREADY            ), //i
+    .io_outputs_2_PREADY    (axi_timerCtrl_io_apb_PREADY           ), //i
     .io_outputs_2_PWRITE    (apb3Router_1_io_outputs_2_PWRITE      ), //o
     .io_outputs_2_PWDATA    (apb3Router_1_io_outputs_2_PWDATA[31:0]), //o
-    .io_outputs_2_PRDATA    (axi_uartCtrl_io_apb_PRDATA[31:0]      ), //i
-    .io_outputs_2_PSLVERROR (apb3Router_1_io_outputs_2_PSLVERROR   ), //i
-    .io_outputs_3_PADDR     (apb3Router_1_io_outputs_3_PADDR[27:0] ), //o
+    .io_outputs_2_PRDATA    (axi_timerCtrl_io_apb_PRDATA[31:0]     ), //i
+    .io_outputs_2_PSLVERROR (axi_timerCtrl_io_apb_PSLVERROR        ), //i
+    .io_outputs_3_PADDR     (apb3Router_1_io_outputs_3_PADDR[19:0] ), //o
     .io_outputs_3_PSEL      (apb3Router_1_io_outputs_3_PSEL        ), //o
     .io_outputs_3_PENABLE   (apb3Router_1_io_outputs_3_PENABLE     ), //o
-    .io_outputs_3_PREADY    (axi_timerCtrl_io_apb_PREADY           ), //i
+    .io_outputs_3_PREADY    (axi_vgaCtrl_io_apb_PREADY             ), //i
     .io_outputs_3_PWRITE    (apb3Router_1_io_outputs_3_PWRITE      ), //o
     .io_outputs_3_PWDATA    (apb3Router_1_io_outputs_3_PWDATA[31:0]), //o
-    .io_outputs_3_PRDATA    (axi_timerCtrl_io_apb_PRDATA[31:0]     ), //i
-    .io_outputs_3_PSLVERROR (axi_timerCtrl_io_apb_PSLVERROR        ), //i
-    .io_outputs_4_PADDR     (apb3Router_1_io_outputs_4_PADDR[27:0] ), //o
-    .io_outputs_4_PSEL      (apb3Router_1_io_outputs_4_PSEL        ), //o
-    .io_outputs_4_PENABLE   (apb3Router_1_io_outputs_4_PENABLE     ), //o
-    .io_outputs_4_PREADY    (axi_vgaCtrl_io_apb_PREADY             ), //i
-    .io_outputs_4_PWRITE    (apb3Router_1_io_outputs_4_PWRITE      ), //o
-    .io_outputs_4_PWDATA    (apb3Router_1_io_outputs_4_PWDATA[31:0]), //o
-    .io_outputs_4_PRDATA    (axi_vgaCtrl_io_apb_PRDATA[31:0]       ), //i
-    .io_outputs_4_PSLVERROR (apb3Router_1_io_outputs_4_PSLVERROR   ), //i
+    .io_outputs_3_PRDATA    (axi_vgaCtrl_io_apb_PRDATA[31:0]       ), //i
+    .io_outputs_3_PSLVERROR (apb3Router_1_io_outputs_3_PSLVERROR   ), //i
     .io_axiClk              (io_axiClk                             ), //i
     .resetCtrl_axiReset     (resetCtrl_axiReset                    )  //i
   );
@@ -1771,7 +1725,7 @@ module Briey (
   assign toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_w_s2mPipe_m2sPipe_payload_strb = toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_w_s2mPipe_rData_strb;
   assign toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_w_s2mPipe_m2sPipe_payload_last = toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_w_s2mPipe_rData_last;
   assign toplevel_axi_ddr3Ctrl_io_axi_arbiter_io_output_w_s2mPipe_m2sPipe_ready = axi_ddr3Ctrl_io_axi_w_ready;
-  assign axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr = toplevel_dbus_axi_decoder_io_sharedOutputs_1_arw_validPipe_payload_addr[27:0];
+  assign axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_addr = toplevel_dbus_axi_decoder_io_sharedOutputs_1_arw_validPipe_payload_addr[19:0];
   assign _zz_io_sharedInputs_0_arw_payload_id_2[3 : 0] = 4'b0000;
   assign axi_apbBridge_io_axi_arbiter_io_sharedInputs_0_arw_payload_burst = 2'b01;
   assign toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_fire = (toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_valid && toplevel_axi_apbBridge_io_axi_arbiter_io_output_arw_halfPipe_ready);
@@ -1792,17 +1746,13 @@ module Briey (
   assign toplevel_axi_apbBridge_io_axi_arbiter_io_output_w_halfPipe_payload_last = toplevel_axi_apbBridge_io_axi_arbiter_io_output_w_rData_last;
   assign toplevel_axi_apbBridge_io_axi_arbiter_io_output_w_halfPipe_ready = axi_apbBridge_io_axi_w_ready;
   assign axi_gpioACtrl_io_apb_PADDR = apb3Router_1_io_outputs_0_PADDR[3:0];
-  assign axi_flashCtrl_io_apb_PADDR = apb3Router_1_io_outputs_1_PADDR[23:0];
+  assign axi_uartCtrl_io_apb_PADDR = apb3Router_1_io_outputs_1_PADDR[4:0];
   assign apb3Router_1_io_outputs_1_PSLVERROR = 1'b0;
-  assign axi_uartCtrl_io_apb_PADDR = apb3Router_1_io_outputs_2_PADDR[4:0];
-  assign apb3Router_1_io_outputs_2_PSLVERROR = 1'b0;
-  assign axi_timerCtrl_io_apb_PADDR = apb3Router_1_io_outputs_3_PADDR[7:0];
-  assign axi_vgaCtrl_io_apb_PADDR = apb3Router_1_io_outputs_4_PADDR[7:0];
-  assign apb3Router_1_io_outputs_4_PSLVERROR = 1'b0;
+  assign axi_timerCtrl_io_apb_PADDR = apb3Router_1_io_outputs_2_PADDR[7:0];
+  assign axi_vgaCtrl_io_apb_PADDR = apb3Router_1_io_outputs_3_PADDR[7:0];
+  assign apb3Router_1_io_outputs_3_PSLVERROR = 1'b0;
   assign io_gpioA_write = axi_gpioACtrl_io_gpio_write;
   assign io_gpioA_writeEnable = axi_gpioACtrl_io_gpio_writeEnable;
-  assign io_flash_O_flash_ck = axi_flashCtrl_io_flash_iface_O_flash_ck;
-  assign io_flash_O_flash_cs_n = axi_flashCtrl_io_flash_iface_O_flash_cs_n;
   assign io_uart_txd = axi_uartCtrl_io_uart_txd;
   assign io_ddr3_O_ddr_addr = axi_ddr3Ctrl_io_ddr_iface_O_ddr_addr;
   assign io_ddr3_O_ddr_ba = axi_ddr3Ctrl_io_ddr_iface_O_ddr_ba;
@@ -2097,15 +2047,15 @@ module Briey (
 endmodule
 
 module Apb3Router (
-  input  wire [27:0]   io_input_PADDR,
-  input  wire [4:0]    io_input_PSEL,
+  input  wire [19:0]   io_input_PADDR,
+  input  wire [3:0]    io_input_PSEL,
   input  wire          io_input_PENABLE,
   output wire          io_input_PREADY,
   input  wire          io_input_PWRITE,
   input  wire [31:0]   io_input_PWDATA,
   output wire [31:0]   io_input_PRDATA,
   output wire          io_input_PSLVERROR,
-  output wire [27:0]   io_outputs_0_PADDR,
+  output wire [19:0]   io_outputs_0_PADDR,
   output wire [0:0]    io_outputs_0_PSEL,
   output wire          io_outputs_0_PENABLE,
   input  wire          io_outputs_0_PREADY,
@@ -2113,7 +2063,7 @@ module Apb3Router (
   output wire [31:0]   io_outputs_0_PWDATA,
   input  wire [31:0]   io_outputs_0_PRDATA,
   input  wire          io_outputs_0_PSLVERROR,
-  output wire [27:0]   io_outputs_1_PADDR,
+  output wire [19:0]   io_outputs_1_PADDR,
   output wire [0:0]    io_outputs_1_PSEL,
   output wire          io_outputs_1_PENABLE,
   input  wire          io_outputs_1_PREADY,
@@ -2121,7 +2071,7 @@ module Apb3Router (
   output wire [31:0]   io_outputs_1_PWDATA,
   input  wire [31:0]   io_outputs_1_PRDATA,
   input  wire          io_outputs_1_PSLVERROR,
-  output wire [27:0]   io_outputs_2_PADDR,
+  output wire [19:0]   io_outputs_2_PADDR,
   output wire [0:0]    io_outputs_2_PSEL,
   output wire          io_outputs_2_PENABLE,
   input  wire          io_outputs_2_PREADY,
@@ -2129,7 +2079,7 @@ module Apb3Router (
   output wire [31:0]   io_outputs_2_PWDATA,
   input  wire [31:0]   io_outputs_2_PRDATA,
   input  wire          io_outputs_2_PSLVERROR,
-  output wire [27:0]   io_outputs_3_PADDR,
+  output wire [19:0]   io_outputs_3_PADDR,
   output wire [0:0]    io_outputs_3_PSEL,
   output wire          io_outputs_3_PENABLE,
   input  wire          io_outputs_3_PREADY,
@@ -2137,14 +2087,6 @@ module Apb3Router (
   output wire [31:0]   io_outputs_3_PWDATA,
   input  wire [31:0]   io_outputs_3_PRDATA,
   input  wire          io_outputs_3_PSLVERROR,
-  output wire [27:0]   io_outputs_4_PADDR,
-  output wire [0:0]    io_outputs_4_PSEL,
-  output wire          io_outputs_4_PENABLE,
-  input  wire          io_outputs_4_PREADY,
-  output wire          io_outputs_4_PWRITE,
-  output wire [31:0]   io_outputs_4_PWDATA,
-  input  wire [31:0]   io_outputs_4_PRDATA,
-  input  wire          io_outputs_4_PSLVERROR,
   input  wire          io_axiClk,
   input  wire          resetCtrl_axiReset
 );
@@ -2155,35 +2097,29 @@ module Apb3Router (
   wire                _zz_selIndex;
   wire                _zz_selIndex_1;
   wire                _zz_selIndex_2;
-  wire                _zz_selIndex_3;
-  reg        [2:0]    selIndex;
+  reg        [1:0]    selIndex;
 
   always @(*) begin
     case(selIndex)
-      3'b000 : begin
+      2'b00 : begin
         _zz_io_input_PREADY = io_outputs_0_PREADY;
         _zz_io_input_PRDATA = io_outputs_0_PRDATA;
         _zz_io_input_PSLVERROR = io_outputs_0_PSLVERROR;
       end
-      3'b001 : begin
+      2'b01 : begin
         _zz_io_input_PREADY = io_outputs_1_PREADY;
         _zz_io_input_PRDATA = io_outputs_1_PRDATA;
         _zz_io_input_PSLVERROR = io_outputs_1_PSLVERROR;
       end
-      3'b010 : begin
+      2'b10 : begin
         _zz_io_input_PREADY = io_outputs_2_PREADY;
         _zz_io_input_PRDATA = io_outputs_2_PRDATA;
         _zz_io_input_PSLVERROR = io_outputs_2_PSLVERROR;
       end
-      3'b011 : begin
+      default : begin
         _zz_io_input_PREADY = io_outputs_3_PREADY;
         _zz_io_input_PRDATA = io_outputs_3_PRDATA;
         _zz_io_input_PSLVERROR = io_outputs_3_PSLVERROR;
-      end
-      default : begin
-        _zz_io_input_PREADY = io_outputs_4_PREADY;
-        _zz_io_input_PRDATA = io_outputs_4_PRDATA;
-        _zz_io_input_PSLVERROR = io_outputs_4_PSLVERROR;
       end
     endcase
   end
@@ -2208,27 +2144,21 @@ module Apb3Router (
   assign io_outputs_3_PSEL[0] = io_input_PSEL[3];
   assign io_outputs_3_PWRITE = io_input_PWRITE;
   assign io_outputs_3_PWDATA = io_input_PWDATA;
-  assign io_outputs_4_PADDR = io_input_PADDR;
-  assign io_outputs_4_PENABLE = io_input_PENABLE;
-  assign io_outputs_4_PSEL[0] = io_input_PSEL[4];
-  assign io_outputs_4_PWRITE = io_input_PWRITE;
-  assign io_outputs_4_PWDATA = io_input_PWDATA;
   assign _zz_selIndex = io_input_PSEL[3];
-  assign _zz_selIndex_1 = io_input_PSEL[4];
-  assign _zz_selIndex_2 = (io_input_PSEL[1] || _zz_selIndex);
-  assign _zz_selIndex_3 = (io_input_PSEL[2] || _zz_selIndex);
+  assign _zz_selIndex_1 = (io_input_PSEL[1] || _zz_selIndex);
+  assign _zz_selIndex_2 = (io_input_PSEL[2] || _zz_selIndex);
   assign io_input_PREADY = _zz_io_input_PREADY;
   assign io_input_PRDATA = _zz_io_input_PRDATA;
   assign io_input_PSLVERROR = _zz_io_input_PSLVERROR;
   always @(posedge io_axiClk) begin
-    selIndex <= {_zz_selIndex_1,{_zz_selIndex_3,_zz_selIndex_2}};
+    selIndex <= {_zz_selIndex_2,_zz_selIndex_1};
   end
 
 
 endmodule
 
 module Apb3Decoder (
-  input  wire [27:0]   io_input_PADDR,
+  input  wire [19:0]   io_input_PADDR,
   input  wire [0:0]    io_input_PSEL,
   input  wire          io_input_PENABLE,
   output reg           io_input_PREADY,
@@ -2236,8 +2166,8 @@ module Apb3Decoder (
   input  wire [31:0]   io_input_PWDATA,
   output wire [31:0]   io_input_PRDATA,
   output reg           io_input_PSLVERROR,
-  output wire [27:0]   io_output_PADDR,
-  output reg  [4:0]    io_output_PSEL,
+  output wire [19:0]   io_output_PADDR,
+  output reg  [3:0]    io_output_PSEL,
   output wire          io_output_PENABLE,
   input  wire          io_output_PREADY,
   output wire          io_output_PWRITE,
@@ -2253,11 +2183,10 @@ module Apb3Decoder (
   assign io_output_PWRITE = io_input_PWRITE;
   assign io_output_PWDATA = io_input_PWDATA;
   always @(*) begin
-    io_output_PSEL[0] = (((io_input_PADDR & (~ 28'h0000fff)) == 28'h0000000) && io_input_PSEL[0]);
-    io_output_PSEL[1] = (((io_input_PADDR & (~ 28'h0ffffff)) == 28'h2000000) && io_input_PSEL[0]);
-    io_output_PSEL[2] = (((io_input_PADDR & (~ 28'h0000fff)) == 28'h4000000) && io_input_PSEL[0]);
-    io_output_PSEL[3] = (((io_input_PADDR & (~ 28'h0000fff)) == 28'h6000000) && io_input_PSEL[0]);
-    io_output_PSEL[4] = (((io_input_PADDR & (~ 28'h0000fff)) == 28'h8000000) && io_input_PSEL[0]);
+    io_output_PSEL[0] = (((io_input_PADDR & (~ 20'h00fff)) == 20'h00000) && io_input_PSEL[0]);
+    io_output_PSEL[1] = (((io_input_PADDR & (~ 20'h00fff)) == 20'h10000) && io_input_PSEL[0]);
+    io_output_PSEL[2] = (((io_input_PADDR & (~ 20'h00fff)) == 20'h20000) && io_input_PSEL[0]);
+    io_output_PSEL[3] = (((io_input_PADDR & (~ 20'h00fff)) == 20'h30000) && io_input_PSEL[0]);
   end
 
   always @(*) begin
@@ -2275,14 +2204,14 @@ module Apb3Decoder (
     end
   end
 
-  assign when_Apb3Decoder_l88 = (io_input_PSEL[0] && (io_output_PSEL == 5'h00));
+  assign when_Apb3Decoder_l88 = (io_input_PSEL[0] && (io_output_PSEL == 4'b0000));
 
 endmodule
 
 module Axi4SharedArbiter_2 (
   input  wire          io_sharedInputs_0_arw_valid,
   output wire          io_sharedInputs_0_arw_ready,
-  input  wire [27:0]   io_sharedInputs_0_arw_payload_addr,
+  input  wire [19:0]   io_sharedInputs_0_arw_payload_addr,
   input  wire [3:0]    io_sharedInputs_0_arw_payload_id,
   input  wire [7:0]    io_sharedInputs_0_arw_payload_len,
   input  wire [2:0]    io_sharedInputs_0_arw_payload_size,
@@ -2305,7 +2234,7 @@ module Axi4SharedArbiter_2 (
   output wire          io_sharedInputs_0_r_payload_last,
   output wire          io_output_arw_valid,
   input  wire          io_output_arw_ready,
-  output wire [27:0]   io_output_arw_payload_addr,
+  output wire [19:0]   io_output_arw_payload_addr,
   output wire [3:0]    io_output_arw_payload_id,
   output wire [7:0]    io_output_arw_payload_len,
   output wire [2:0]    io_output_arw_payload_size,
@@ -2335,7 +2264,7 @@ module Axi4SharedArbiter_2 (
   wire                cmdRouteFork_thrown_translated_fifo_io_flush;
   wire                cmdArbiter_io_inputs_0_ready;
   wire                cmdArbiter_io_output_valid;
-  wire       [27:0]   cmdArbiter_io_output_payload_addr;
+  wire       [19:0]   cmdArbiter_io_output_payload_addr;
   wire       [3:0]    cmdArbiter_io_output_payload_id;
   wire       [7:0]    cmdArbiter_io_output_payload_len;
   wire       [2:0]    cmdArbiter_io_output_payload_size;
@@ -2348,7 +2277,7 @@ module Axi4SharedArbiter_2 (
   wire       [2:0]    cmdRouteFork_thrown_translated_fifo_io_availability;
   wire                inputsCmd_0_valid;
   wire                inputsCmd_0_ready;
-  wire       [27:0]   inputsCmd_0_payload_addr;
+  wire       [19:0]   inputsCmd_0_payload_addr;
   wire       [3:0]    inputsCmd_0_payload_id;
   wire       [7:0]    inputsCmd_0_payload_len;
   wire       [2:0]    inputsCmd_0_payload_size;
@@ -2356,7 +2285,7 @@ module Axi4SharedArbiter_2 (
   wire                inputsCmd_0_payload_write;
   wire                cmdOutputFork_valid;
   wire                cmdOutputFork_ready;
-  wire       [27:0]   cmdOutputFork_payload_addr;
+  wire       [19:0]   cmdOutputFork_payload_addr;
   wire       [3:0]    cmdOutputFork_payload_id;
   wire       [7:0]    cmdOutputFork_payload_len;
   wire       [2:0]    cmdOutputFork_payload_size;
@@ -2364,7 +2293,7 @@ module Axi4SharedArbiter_2 (
   wire                cmdOutputFork_payload_write;
   wire                cmdRouteFork_valid;
   reg                 cmdRouteFork_ready;
-  wire       [27:0]   cmdRouteFork_payload_addr;
+  wire       [19:0]   cmdRouteFork_payload_addr;
   wire       [3:0]    cmdRouteFork_payload_id;
   wire       [7:0]    cmdRouteFork_payload_len;
   wire       [2:0]    cmdRouteFork_payload_size;
@@ -2379,7 +2308,7 @@ module Axi4SharedArbiter_2 (
   wire                when_Stream_l439;
   reg                 cmdRouteFork_thrown_valid;
   wire                cmdRouteFork_thrown_ready;
-  wire       [27:0]   cmdRouteFork_thrown_payload_addr;
+  wire       [19:0]   cmdRouteFork_thrown_payload_addr;
   wire       [3:0]    cmdRouteFork_thrown_payload_id;
   wire       [7:0]    cmdRouteFork_thrown_payload_len;
   wire       [2:0]    cmdRouteFork_thrown_payload_size;
@@ -2399,7 +2328,7 @@ module Axi4SharedArbiter_2 (
   StreamArbiter cmdArbiter (
     .io_inputs_0_valid         (inputsCmd_0_valid                      ), //i
     .io_inputs_0_ready         (cmdArbiter_io_inputs_0_ready           ), //o
-    .io_inputs_0_payload_addr  (inputsCmd_0_payload_addr[27:0]         ), //i
+    .io_inputs_0_payload_addr  (inputsCmd_0_payload_addr[19:0]         ), //i
     .io_inputs_0_payload_id    (inputsCmd_0_payload_id[3:0]            ), //i
     .io_inputs_0_payload_len   (inputsCmd_0_payload_len[7:0]           ), //i
     .io_inputs_0_payload_size  (inputsCmd_0_payload_size[2:0]          ), //i
@@ -2407,7 +2336,7 @@ module Axi4SharedArbiter_2 (
     .io_inputs_0_payload_write (inputsCmd_0_payload_write              ), //i
     .io_output_valid           (cmdArbiter_io_output_valid             ), //o
     .io_output_ready           (cmdArbiter_io_output_ready             ), //i
-    .io_output_payload_addr    (cmdArbiter_io_output_payload_addr[27:0]), //o
+    .io_output_payload_addr    (cmdArbiter_io_output_payload_addr[19:0]), //o
     .io_output_payload_id      (cmdArbiter_io_output_payload_id[3:0]   ), //o
     .io_output_payload_len     (cmdArbiter_io_output_payload_len[7:0]  ), //o
     .io_output_payload_size    (cmdArbiter_io_output_payload_size[2:0] ), //o
@@ -11686,61 +11615,6 @@ module PinsecTimerCtrl (
 
 endmodule
 
-module Paski_GowinFlash (
-  input  wire          resetCtrl_axiReset,
-  input  wire          io_axiClk,
-  input  wire          spi_clock_resetn,
-  input  wire          spi_clock_clk,
-  input  wire [23:0]   io_apb_PADDR,
-  input  wire [0:0]    io_apb_PSEL,
-  input  wire          io_apb_PENABLE,
-  output wire          io_apb_PREADY,
-  input  wire          io_apb_PWRITE,
-  input  wire [31:0]   io_apb_PWDATA,
-  output wire [31:0]   io_apb_PRDATA,
-  output wire          io_flash_iface_O_flash_ck,
-  output wire          io_flash_iface_O_flash_cs_n,
-  inout  wire          io_flash_iface_IO_flash_hold_n,
-  inout  wire          io_flash_iface_IO_flash_wp_n,
-  inout  wire          io_flash_iface_IO_flash_do,
-  inout  wire          io_flash_iface_IO_flash_di
-);
-
-  wire                gowin_Flash_I_presetn;
-  wire       [31:0]   gowin_Flash_I_paddr;
-  wire       [31:0]   gowin_Flash_O_prdata;
-  wire                gowin_Flash_O_pready;
-  wire                gowin_Flash_O_flash_ck;
-  wire                gowin_Flash_O_flash_cs_n;
-
-  SPI_Flash_Interface_Top gowin_Flash (
-    .I_pclk          (io_axiClk                 ), //i
-    .I_presetn       (gowin_Flash_I_presetn     ), //i
-    .I_paddr         (gowin_Flash_I_paddr[31:0] ), //i
-    .I_penable       (io_apb_PENABLE            ), //i
-    .O_prdata        (gowin_Flash_O_prdata[31:0]), //o
-    .O_pready        (gowin_Flash_O_pready      ), //o
-    .I_psel          (io_apb_PSEL               ), //i
-    .I_pwdata        (io_apb_PWDATA[31:0]       ), //i
-    .I_pwrite        (io_apb_PWRITE             ), //i
-    .I_spi_clock     (spi_clock_clk             ), //i
-    .I_spi_rstn      (spi_clock_resetn          ), //i
-    .O_flash_ck      (gowin_Flash_O_flash_ck    ), //o
-    .O_flash_cs_n    (gowin_Flash_O_flash_cs_n  ), //o
-    .IO_flash_hold_n ({io_flash_iface_IO_flash_hold_n}),
-    .IO_flash_wp_n   ({io_flash_iface_IO_flash_wp_n}),
-    .IO_flash_do     ({io_flash_iface_IO_flash_do}),
-    .IO_flash_di     ({io_flash_iface_IO_flash_di}) 
-  );
-  assign gowin_Flash_I_presetn = (! resetCtrl_axiReset);
-  assign gowin_Flash_I_paddr = {8'd0, io_apb_PADDR};
-  assign io_apb_PRDATA = gowin_Flash_O_prdata;
-  assign io_apb_PREADY = gowin_Flash_O_pready;
-  assign io_flash_iface_O_flash_ck = gowin_Flash_O_flash_ck;
-  assign io_flash_iface_O_flash_cs_n = gowin_Flash_O_flash_cs_n;
-
-endmodule
-
 module Apb3Gpio (
   input  wire [3:0]    io_apb_PADDR,
   input  wire [0:0]    io_apb_PSEL,
@@ -11836,7 +11710,7 @@ endmodule
 module Axi4SharedToApb3Bridge (
   input  wire          io_axi_arw_valid,
   output reg           io_axi_arw_ready,
-  input  wire [27:0]   io_axi_arw_payload_addr,
+  input  wire [19:0]   io_axi_arw_payload_addr,
   input  wire [3:0]    io_axi_arw_payload_id,
   input  wire [7:0]    io_axi_arw_payload_len,
   input  wire [2:0]    io_axi_arw_payload_size,
@@ -11857,7 +11731,7 @@ module Axi4SharedToApb3Bridge (
   output wire [3:0]    io_axi_r_payload_id,
   output wire [1:0]    io_axi_r_payload_resp,
   output wire          io_axi_r_payload_last,
-  output wire [27:0]   io_apb_PADDR,
+  output wire [19:0]   io_apb_PADDR,
   output reg  [0:0]    io_apb_PSEL,
   output reg           io_apb_PENABLE,
   input  wire          io_apb_PREADY,
@@ -12692,7 +12566,7 @@ endmodule
 module StreamArbiter (
   input  wire          io_inputs_0_valid,
   output wire          io_inputs_0_ready,
-  input  wire [27:0]   io_inputs_0_payload_addr,
+  input  wire [19:0]   io_inputs_0_payload_addr,
   input  wire [3:0]    io_inputs_0_payload_id,
   input  wire [7:0]    io_inputs_0_payload_len,
   input  wire [2:0]    io_inputs_0_payload_size,
@@ -12700,7 +12574,7 @@ module StreamArbiter (
   input  wire          io_inputs_0_payload_write,
   output wire          io_output_valid,
   input  wire          io_output_ready,
-  output wire [27:0]   io_output_payload_addr,
+  output wire [19:0]   io_output_payload_addr,
   output wire [3:0]    io_output_payload_id,
   output wire [7:0]    io_output_payload_len,
   output wire [2:0]    io_output_payload_size,
