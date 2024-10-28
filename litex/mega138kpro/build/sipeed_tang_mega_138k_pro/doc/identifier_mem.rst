@@ -7,13 +7,13 @@ Register Listing for IDENTIFIER_MEM
 +----------------------------------------+------------------------------------+
 | Register                               | Address                            |
 +========================================+====================================+
-| :ref:`IDENTIFIER_MEM <IDENTIFIER_MEM>` | :ref:`0xf0000800 <IDENTIFIER_MEM>` |
+| :ref:`IDENTIFIER_MEM <IDENTIFIER_MEM>` | :ref:`0xf0001800 <IDENTIFIER_MEM>` |
 +----------------------------------------+------------------------------------+
 
 IDENTIFIER_MEM
 ^^^^^^^^^^^^^^
 
-`Address: 0xf0000800 + 0x0 = 0xf0000800`
+`Address: 0xf0001800 + 0x0 = 0xf0001800`
 
     8 x 52-bit memory
 

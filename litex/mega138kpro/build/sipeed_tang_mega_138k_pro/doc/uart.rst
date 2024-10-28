@@ -7,27 +7,27 @@ Register Listing for UART
 +------------------------------------------+-------------------------------------+
 | Register                                 | Address                             |
 +==========================================+=====================================+
-| :ref:`UART_RXTX <UART_RXTX>`             | :ref:`0xf0002000 <UART_RXTX>`       |
+| :ref:`UART_RXTX <UART_RXTX>`             | :ref:`0xf0003800 <UART_RXTX>`       |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_TXFULL <UART_TXFULL>`         | :ref:`0xf0002004 <UART_TXFULL>`     |
+| :ref:`UART_TXFULL <UART_TXFULL>`         | :ref:`0xf0003804 <UART_TXFULL>`     |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_RXEMPTY <UART_RXEMPTY>`       | :ref:`0xf0002008 <UART_RXEMPTY>`    |
+| :ref:`UART_RXEMPTY <UART_RXEMPTY>`       | :ref:`0xf0003808 <UART_RXEMPTY>`    |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_EV_STATUS <UART_EV_STATUS>`   | :ref:`0xf000200c <UART_EV_STATUS>`  |
+| :ref:`UART_EV_STATUS <UART_EV_STATUS>`   | :ref:`0xf000380c <UART_EV_STATUS>`  |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_EV_PENDING <UART_EV_PENDING>` | :ref:`0xf0002010 <UART_EV_PENDING>` |
+| :ref:`UART_EV_PENDING <UART_EV_PENDING>` | :ref:`0xf0003810 <UART_EV_PENDING>` |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_EV_ENABLE <UART_EV_ENABLE>`   | :ref:`0xf0002014 <UART_EV_ENABLE>`  |
+| :ref:`UART_EV_ENABLE <UART_EV_ENABLE>`   | :ref:`0xf0003814 <UART_EV_ENABLE>`  |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_TXEMPTY <UART_TXEMPTY>`       | :ref:`0xf0002018 <UART_TXEMPTY>`    |
+| :ref:`UART_TXEMPTY <UART_TXEMPTY>`       | :ref:`0xf0003818 <UART_TXEMPTY>`    |
 +------------------------------------------+-------------------------------------+
-| :ref:`UART_RXFULL <UART_RXFULL>`         | :ref:`0xf000201c <UART_RXFULL>`     |
+| :ref:`UART_RXFULL <UART_RXFULL>`         | :ref:`0xf000381c <UART_RXFULL>`     |
 +------------------------------------------+-------------------------------------+
 
 UART_RXTX
 ^^^^^^^^^
 
-`Address: 0xf0002000 + 0x0 = 0xf0002000`
+`Address: 0xf0003800 + 0x0 = 0xf0003800`
 
 
     .. wavedrom::
@@ -44,7 +44,7 @@ UART_RXTX
 UART_TXFULL
 ^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x4 = 0xf0002004`
+`Address: 0xf0003800 + 0x4 = 0xf0003804`
 
     TX FIFO Full.
 
@@ -62,7 +62,7 @@ UART_TXFULL
 UART_RXEMPTY
 ^^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x8 = 0xf0002008`
+`Address: 0xf0003800 + 0x8 = 0xf0003808`
 
     RX FIFO Empty.
 
@@ -80,7 +80,7 @@ UART_RXEMPTY
 UART_EV_STATUS
 ^^^^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0xc = 0xf000200c`
+`Address: 0xf0003800 + 0xc = 0xf000380c`
 
     This register contains the current raw level of the rx event trigger.  Writes to
     this register have no effect.
@@ -108,7 +108,7 @@ UART_EV_STATUS
 UART_EV_PENDING
 ^^^^^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x10 = 0xf0002010`
+`Address: 0xf0003800 + 0x10 = 0xf0003810`
 
     When a  rx event occurs, the corresponding bit will be set in this register.  To
     clear the Event, set the corresponding bit in this register.
@@ -136,7 +136,7 @@ UART_EV_PENDING
 UART_EV_ENABLE
 ^^^^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x14 = 0xf0002014`
+`Address: 0xf0003800 + 0x14 = 0xf0003814`
 
     This register enables the corresponding rx events.  Write a ``0`` to this
     register to disable individual events.
@@ -164,7 +164,7 @@ UART_EV_ENABLE
 UART_TXEMPTY
 ^^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x18 = 0xf0002018`
+`Address: 0xf0003800 + 0x18 = 0xf0003818`
 
     TX FIFO Empty.
 
@@ -182,7 +182,7 @@ UART_TXEMPTY
 UART_RXFULL
 ^^^^^^^^^^^
 
-`Address: 0xf0002000 + 0x1c = 0xf000201c`
+`Address: 0xf0003800 + 0x1c = 0xf000381c`
 
     RX FIFO Full.
 

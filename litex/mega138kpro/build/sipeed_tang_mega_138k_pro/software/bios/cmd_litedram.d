@@ -38,6 +38,7 @@ cmd_litedram.o: \
  /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/sdram_spd.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/bist.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/accessors.h \
+ /home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/software/include/generated/sdram_phy.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/software/bios/cmds/../command.h \
  /home/furiosa/litex/FPGA/litex/litex/soc/software/bios/cmds/../helpers.h
 /home/furiosa/litex/FPGA/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio/stdio.h:
@@ -78,5 +79,6 @@ cmd_litedram.o: \
 /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/sdram_spd.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/bist.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/software/liblitedram/accessors.h:
+/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/software/include/generated/sdram_phy.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/software/bios/cmds/../command.h:
 /home/furiosa/litex/FPGA/litex/litex/soc/software/bios/cmds/../helpers.h:

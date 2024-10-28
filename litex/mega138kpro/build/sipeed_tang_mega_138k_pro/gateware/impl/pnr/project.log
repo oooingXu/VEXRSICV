@@ -13,6 +13,7 @@ Running routing......
 [70%] Routing Phase 1 completed
 [80%] Routing Phase 2 completed
 WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk50_d' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'eth_clocks_rx_d' by the specified constraint. And then it may lead to the excessive delay or skew
 [90%] Routing Phase 3 completed
 Running timing analysis......
 [95%] Timing analysis completed
@@ -23,5 +24,5 @@ Generate file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/ga
 Generate file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/impl/pnr/project.rpt.html" completed
 Generate file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/impl/pnr/project.rpt.txt" completed
 Generate file "/home/furiosa/FPGA/mega138kpro/build/sipeed_tang_mega_138k_pro/gateware/impl/pnr/project.tr.html" completed
-Sun Oct 27 00:45:26 2024
+Sun Oct 27 22:51:46 2024
 
