@@ -45,3 +45,17 @@ void eggs(void){
 	printf("\n");
 };
 
+void EGG(void);
+void EGG(void){
+	printf("\e[1m                                               \e[0m\n");
+	printf("\e[1m  |||||||||||||  |||||||||||||  |||||||||||||  \e[0m\n");
+	printf("\e[1m  ||             ||             ||         ||  \e[0m\n");
+	printf("\e[1m  ||             ||             ||             \e[0m\n");
+	printf("\e[1m  |||||||||||||  |||||||||||||  ||     ||||||  \e[0m\n");
+	printf("\e[1m  ||             ||             ||         ||  \e[0m\n");
+	printf("\e[1m  ||             ||             ||         ||  \e[0m\n");
+	printf("\e[1m  |||||||||||||  |||||||||||||  |||||||||||||  \e[0m\n");
+	printf("\e[1m                                               \e[0m\n");
+	printf("\n");
+}
+	
