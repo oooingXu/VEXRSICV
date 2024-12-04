@@ -1,0 +1,16 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW5AST-138B" pn="GW5AST-LV138FPG676AC1/I0">gw5ast138b-007</Device>
+    <FileList>
+        <File path="src/VexRiscv.v" type="file.verilog" enable="1"/>
+        <File path="src/music_player_2.v" type="file.verilog" enable="1"/>
+        <File path="src/pwm_generator.v" type="file.verilog" enable="1"/>
+        <File path="src/sipeed_tang_mega_138k_pro.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/sipeed_tang_mega_138k_pro.cst" type="file.cst" enable="1"/>
+        <File path="src/sipeed_tang_mega_138k_pro.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

@@ -1,0 +1,16 @@
+-d D:\File_Work\FPGA\GOWIN\top_buzzer_SoC\Documents\buzzer_SoC\Documents\final_buzzer\impl\gwsynthesis\final_buzzer.vg
+-p GW5AST-138B-FCPBGA676A-1
+-pn GW5AST-LV138FPG676AC1/I0
+-cst D:\File_Work\FPGA\GOWIN\top_buzzer_SoC\Documents\buzzer_SoC\Documents\final_buzzer\src\sipeed_tang_mega_138k_pro.cst
+-cfg D:\File_Work\FPGA\GOWIN\top_buzzer_SoC\Documents\buzzer_SoC\Documents\final_buzzer\impl\pnr\device.cfg
+-sdc D:\File_Work\FPGA\GOWIN\top_buzzer_SoC\Documents\buzzer_SoC\Documents\final_buzzer\src\sipeed_tang_mega_138k_pro.sdc
+-bit
+-tr
+-ph
+-timing
+-ireg_not_in_iob
+-oreg_not_in_iob
+-ioreg_not_in_iob
+-cst_error
+-correct_hold 1
+-route_maxfan 23

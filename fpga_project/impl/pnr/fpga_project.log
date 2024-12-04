@@ -1,7 +1,0 @@
-Reading netlist file: "D:\File_Tmp\VEXRSICV\fpga_project\impl\gwsynthesis\fpga_project.vg"
-Parsing netlist file "D:\File_Tmp\VEXRSICV\fpga_project\impl\gwsynthesis\fpga_project.vg" completed
-ERROR  (PA2122) : Not support 'ram_symbol3_ram_symbol3_0_0_s'(SP) WRITE_MODE = 2'b10, please change write mode WRITE_MODE = 2'b00 or 2'b01.
-ERROR  (PA2122) : Not support 'ram_symbol2_ram_symbol2_0_0_s'(SP) WRITE_MODE = 2'b10, please change write mode WRITE_MODE = 2'b00 or 2'b01.
-ERROR  (PA2122) : Not support 'ram_symbol1_ram_symbol1_0_0_s'(SP) WRITE_MODE = 2'b10, please change write mode WRITE_MODE = 2'b00 or 2'b01.
-ERROR  (PA2122) : Not support 'ram_symbol0_ram_symbol0_0_0_s'(SP) WRITE_MODE = 2'b10, please change write mode WRITE_MODE = 2'b00 or 2'b01.
-NOTE  (PA0005) : Processing netlist completed with errors

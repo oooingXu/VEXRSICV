@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top">
+    <SubModule name="play" Register="20" Lut="255">
+        <SubModule name="pwm_inst" Register="60" Alu="31" Lut="1872" MULT27X36="1"/>
+    </SubModule>
+    <SubModule name="SoC" Register="2423" Alu="601" Lut="3380" Bsram="72" Ssram="33">
+        <SubModule name="VexRiscv" Register="1141" Alu="309" Lut="2172" MULTALU27X18="4" Bsram="2">
+            <SubModule name="IBusCachedPlugin_cache" Register="75" Alu="26" Lut="48" Bsram="3"/>
+            <SubModule name="dataCache_1" Register="61" Alu="39" Lut="109" Bsram="5"/>
+        </SubModule>
+    </SubModule>
+</Module>

@@ -1,8 +1,0 @@
-{
-    "value": [
-        "ref:v0:8df615d1:/home/romeo/VEXRSICV/VexRiscv/build.sc",
-        "ref:v0:809f953b:/home/romeo/VEXRSICV/VexRiscv/out/mill-build/generateScriptSources.dest"
-    ],
-    "valueHash": 673553178,
-    "inputsHash": 1979037555
-}

@@ -1,8 +1,0 @@
-{
-    "value": {
-        "analysisFile": "/home/shaw/GW_FPGA/VEXRISCV/src/vsrc/VEXRSICV/VexRiscv/out/mill-build/compile.dest/zinc",
-        "classes": "ref:v0:a9779027:/home/shaw/GW_FPGA/VEXRISCV/src/vsrc/VEXRSICV/VexRiscv/out/mill-build/compile.dest/classes"
-    },
-    "valueHash": -52269026,
-    "inputsHash": 2006434524
-}

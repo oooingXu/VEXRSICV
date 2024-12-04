@@ -1,9 +1,0 @@
-{
-    "value": [
-        "ref:v0:c984eca8:/home/romeo/VEXRSICV/VexRiscv/compile-resources",
-        "ref:v0:c984eca8:/home/romeo/VEXRSICV/VexRiscv/src/main/resources",
-        "ref:v0:f87aa051:/home/romeo/VEXRSICV/VexRiscv/out/VexRiscv/compile.dest/classes"
-    ],
-    "valueHash": -737782372,
-    "inputsHash": 400815762
-}

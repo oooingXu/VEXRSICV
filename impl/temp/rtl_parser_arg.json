@@ -1,0 +1,33 @@
+{
+ "Device" : "GW5AST-138B",
+ "Files" : [
+  {
+   "Path" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/src/VexRiscv.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/src/music_player_2.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/src/pwm_generator.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/src/sipeed_tang_mega_138k_pro.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/File_Work/FPGA/GOWIN/top_buzzer_SoC/Documents/buzzer_SoC/Documents/final_buzzer/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

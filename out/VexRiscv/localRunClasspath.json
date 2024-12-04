@@ -1,8 +1,0 @@
-{
-    "value": [
-        "ref:v0:c984eca8:/home/shaw/GW_FPGA/VEXRISCV/src/vsrc/VEXRSICV/VexRiscv/src/main/resources",
-        "ref:v0:e325f393:/home/shaw/GW_FPGA/VEXRISCV/src/vsrc/VEXRSICV/VexRiscv/out/VexRiscv/compile.dest/classes"
-    ],
-    "valueHash": 768599980,
-    "inputsHash": -176646518
-}
